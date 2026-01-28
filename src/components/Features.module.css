@@ -1,398 +1,70 @@
 .section {
-    padding: var(--section-padding) 0;
+    padding: var(--space-section) 0;
+    border-top: 1px solid var(--border);
 }
 
-.container {
-    max-width: var(--content-max-width);
+.inner {
+    max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 48px;
 }
 
-.feature {
-    display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    gap: 64px;
-    align-items: center;
-    padding: 80px 0;
-    border-bottom: 1px solid var(--border);
-}
-
-.feature:last-child {
-    border-bottom: none;
-}
-
-.feature.reversed {
-    grid-template-columns: 1.1fr 1fr;
-}
-
-.feature.reversed .featureContent {
-    order: 2;
-}
-
-.feature.reversed .featureVisual {
-    order: 1;
-}
-
-.featureContent {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.featureIcon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    border-radius: var(--radius-lg);
-    background: var(--accent-dim);
-    color: var(--accent);
-}
-
-.badge {
-    display: inline-flex;
-    align-self: flex-start;
-    padding: 6px 12px;
+.label {
     font-size: 12px;
-    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
-    color: white;
-    border-radius: var(--radius-md);
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 60px;
 }
 
-.featureTitle {
-    font-size: 32px;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    color: var(--text-primary);
-    margin-top: 8px;
-}
-
-.featureDescription {
-    font-size: 17px;
-    line-height: 1.7;
-    color: var(--text-secondary);
-}
-
-.featurePoints {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 16px;
-}
-
-.featurePoint {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    font-size: 15px;
-    color: var(--text-secondary);
-}
-
-.pointCheck {
-    color: var(--success);
-    font-weight: 600;
-    font-size: 14px;
-    margin-top: 2px;
-}
-
-/* Feature Visuals */
-.featureVisual {
-    background: var(--bg-surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-xl);
-    padding: 24px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-}
-
-/* Calendar Visual */
-.calendarVisual {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.calendarHeader {
+.grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 8px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
 }
 
-.calendarDay {
-    text-align: center;
+.item {
+    /* No box, no border */
+}
+
+.num {
+    display: block;
     font-size: 12px;
-    font-weight: 500;
     color: var(--text-muted);
-    padding: 8px;
+    margin-bottom: 16px;
 }
 
-.calendarGrid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 8px;
+.title {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 12px;
 }
 
-.calendarColumn {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.calendarSlot {
-    height: 40px;
-    background: var(--bg-elevated);
-    border-radius: var(--radius-sm);
-    position: relative;
-}
-
-.calendarEvent {
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    right: 2px;
-    border-radius: var(--radius-sm);
-    font-size: 10px;
-    font-weight: 500;
-    color: white;
-    padding: 4px 6px;
-    overflow: hidden;
-}
-
-/* Call Sheet Visual */
-.callSheetVisual {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.callSheetHeader {
-    text-align: center;
-    padding-bottom: 16px;
-    border-bottom: 1px solid var(--border);
-}
-
-.callSheetTitle {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--text-primary);
-}
-
-.callSheetDate {
+.desc {
     font-size: 14px;
+    line-height: 1.6;
     color: var(--text-secondary);
-    margin-top: 4px;
-}
-
-.callSheetSection {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 16px;
-    background: var(--bg-elevated);
-    border-radius: var(--radius-md);
-}
-
-.callSheetLabel {
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--text-muted);
-}
-
-.callSheetTime {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--accent);
-}
-
-.callSheetCast {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 8px;
-}
-
-.callSheetCastHeader {
-    display: flex;
-    justify-content: space-between;
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--text-muted);
-    padding: 0 8px;
-}
-
-.callSheetCastRow {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-    color: var(--text-secondary);
-    padding: 10px 12px;
-    background: var(--bg-primary);
-    border-radius: var(--radius-sm);
-}
-
-/* Cast Visual */
-.castVisual {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.castHeader,
-.castRow {
-    display: grid;
-    grid-template-columns: 120px repeat(7, 1fr);
-    gap: 4px;
-    align-items: center;
-}
-
-.castHeader {
-    padding: 8px 0;
-    border-bottom: 1px solid var(--border);
-}
-
-.castRow {
-    padding: 8px 0;
-}
-
-.castName {
-    font-size: 13px;
-    color: var(--text-secondary);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.castHeader .castName {
-    color: var(--text-muted);
-    font-weight: 500;
-}
-
-.castDay {
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--text-muted);
-    text-align: center;
-}
-
-.castCell {
-    width: 28px;
-    height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 11px;
-    font-weight: 600;
-    background: var(--bg-elevated);
-    border-radius: var(--radius-sm);
-    color: transparent;
-}
-
-.castCell.working {
-    background: var(--success);
-    color: white;
-}
-
-/* AI Visual */
-.aiVisual {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 16px;
-    align-items: center;
-}
-
-.aiScript {
-    padding: 16px;
-    background: var(--bg-primary);
-    border-radius: var(--radius-md);
-    font-family: var(--font-mono);
-    font-size: 12px;
-    line-height: 1.8;
-    color: var(--text-secondary);
-}
-
-.aiScriptLine {
-    margin-bottom: 4px;
-}
-
-.aiHighlight {
-    color: var(--accent);
-    font-weight: 600;
-}
-
-.aiArrow {
-    font-size: 24px;
-    color: var(--accent);
-}
-
-.aiBreakdown {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.aiBreakdownItem {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 13px;
-    color: var(--text-secondary);
-    padding: 12px;
-    background: var(--bg-primary);
-    border-radius: var(--radius-md);
-}
-
-.aiTag {
-    font-size: 10px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    padding: 4px 8px;
-    background: var(--accent-dim);
-    color: var(--accent);
-    border-radius: var(--radius-sm);
 }
 
 @media (max-width: 1024px) {
-
-    .feature,
-    .feature.reversed {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .feature.reversed .featureContent,
-    .feature.reversed .featureVisual {
-        order: unset;
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 48px 32px;
     }
 }
 
 @media (max-width: 768px) {
-    .feature {
-        padding: 48px 0;
+    .inner {
+        padding: 0 24px;
     }
 
-    .featureTitle {
-        font-size: 24px;
-    }
-
-    .aiVisual {
+    .grid {
         grid-template-columns: 1fr;
+        gap: 40px;
     }
 
-    .aiArrow {
-        transform: rotate(90deg);
-        text-align: center;
-    }
-
-    .castHeader,
-    .castRow {
-        grid-template-columns: 80px repeat(7, 1fr);
+    .title {
+        font-size: 20px;
     }
 }

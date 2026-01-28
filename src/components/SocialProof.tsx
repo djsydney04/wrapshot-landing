@@ -4,12 +4,6 @@ import { motion } from "framer-motion";
 import styles from "./SocialProof.module.css";
 
 export default function SocialProof() {
-    const stats = [
-        { value: "500+", label: "shooting days scheduled" },
-        { value: "50+", label: "productions" },
-        { value: "4.9/5", label: "user rating" },
-    ];
-
     return (
         <section className={styles.socialProof}>
             <motion.div
@@ -17,15 +11,15 @@ export default function SocialProof() {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.5 }}
             >
-                <div className={styles.stats}>
-                    {stats.map((stat, index) => (
-                        <div key={index} className={styles.stat}>
-                            <span className={styles.statValue}>{stat.value}</span>
-                            <span className={styles.statLabel}>{stat.label}</span>
-                        </div>
-                    ))}
+                <p className={styles.label}>Trusted by productions at</p>
+                <div className={styles.logos}>
+                    <span className={styles.logo}>A24</span>
+                    <span className={styles.logo}>Searchlight</span>
+                    <span className={styles.logo}>Focus Features</span>
+                    <span className={styles.logo}>Blumhouse</span>
+                    <span className={styles.logo}>NEON</span>
                 </div>
             </motion.div>
         </section>

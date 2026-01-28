@@ -1,5 +1,5 @@
 .socialProof {
-    padding: 48px 0;
+    padding: 56px 0;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
     background: var(--bg-surface);
@@ -9,42 +9,45 @@
     max-width: var(--content-max-width);
     margin: 0 auto;
     padding: 0 24px;
+    text-align: center;
 }
 
-.stats {
+.label {
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.logos {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 64px;
+    gap: 48px;
+    flex-wrap: wrap;
 }
 
-.stat {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.statValue {
-    font-size: 24px;
+.logo {
+    font-size: 18px;
     font-weight: 600;
-    color: var(--text-primary);
     letter-spacing: -0.02em;
+    color: var(--text-muted);
+    opacity: 0.7;
+    transition: opacity var(--transition-fast);
 }
 
-.statLabel {
-    font-size: 15px;
-    color: var(--text-muted);
+.logo:hover {
+    opacity: 1;
 }
 
 @media (max-width: 768px) {
-    .stats {
-        flex-direction: column;
-        gap: 24px;
+    .logos {
+        gap: 32px;
     }
 
-    .stat {
-        flex-direction: column;
-        text-align: center;
-        gap: 4px;
+    .logo {
+        font-size: 16px;
     }
 }
