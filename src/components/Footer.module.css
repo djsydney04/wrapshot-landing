@@ -1,0 +1,139 @@
+.footer {
+    padding: 80px 0 40px;
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border);
+}
+
+.container {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    gap: 64px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--border);
+}
+
+.brand {
+    max-width: 280px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--text-primary);
+}
+
+.logoIcon {
+    width: 32px;
+    height: 32px;
+}
+
+.logoText {
+    letter-spacing: -0.02em;
+}
+
+.tagline {
+    margin-top: 16px;
+    font-size: 15px;
+    color: var(--text-secondary);
+}
+
+.links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px;
+}
+
+.linkGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.linkGroupTitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.linkList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.link {
+    font-size: 14px;
+    color: var(--text-secondary);
+    transition: color var(--transition-fast);
+}
+
+.link:hover {
+    color: var(--text-primary);
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 32px;
+}
+
+.copyright {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.socials {
+    display: flex;
+    gap: 16px;
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--text-secondary);
+    background: var(--bg-elevated);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.socialLink:hover {
+    color: var(--text-primary);
+    background: var(--border);
+}
+
+@media (max-width: 1024px) {
+    .top {
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .brand {
+        max-width: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
+    .bottom {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+    }
+}

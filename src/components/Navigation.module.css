@@ -1,0 +1,141 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 16px 0;
+    transition: all var(--transition-base);
+    background: transparent;
+}
+
+.nav.scrolled {
+    background: rgba(9, 9, 11, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--text-primary);
+}
+
+.logoIcon {
+    width: 32px;
+    height: 32px;
+}
+
+.logoText {
+    letter-spacing: -0.02em;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navLink {
+    padding: 8px 16px;
+    color: var(--text-secondary);
+    font-size: 15px;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+    border-radius: var(--radius-md);
+}
+
+.navLink:hover {
+    color: var(--text-primary);
+    background: var(--bg-elevated);
+}
+
+.navActions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.loginLink {
+    color: var(--text-secondary);
+    font-size: 15px;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+.loginLink:hover {
+    color: var(--text-primary);
+}
+
+.mobileMenuBtn {
+    display: none;
+    padding: 8px;
+    color: var(--text-primary);
+}
+
+.mobileMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mobileNavLink {
+    padding: 12px 16px;
+    color: var(--text-secondary);
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: var(--radius-md);
+}
+
+.mobileNavLink:hover {
+    color: var(--text-primary);
+    background: var(--bg-elevated);
+}
+
+.mobileActions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+
+.mobileLoginLink {
+    text-align: center;
+    padding: 12px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+
+    .navLinks,
+    .navActions {
+        display: none;
+    }
+
+    .mobileMenuBtn {
+        display: block;
+    }
+}
