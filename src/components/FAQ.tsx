@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import styles from "./FAQ.module.css";
 
 const faqs = [
     {
@@ -27,51 +26,51 @@ export default function FAQ() {
     const [open, setOpen] = useState<number | null>(null);
 
     return (
-        <section id="faq" className={styles.section}>
-            <div className={styles.inner}>
-                <div className={styles.layout}>
+        <section id="faq" className="py-section border-t border-border">
+            <div className="max-w-container mx-auto px-12">
+                <div className="grid grid-cols-[1fr_1.5fr] gap-20 max-lg:grid-cols-1 max-lg:gap-12">
                     <motion.div
-                        className={styles.header}
+                        className="sticky top-[120px] self-start max-lg:static"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        <p className={styles.label}>FAQ</p>
-                        <h2 className={styles.headline}>
+                        <p className="text-xs uppercase tracking-[0.1em] text-text-muted mb-4">FAQ</p>
+                        <h2 className="font-serif text-[40px] font-normal leading-[1.15] max-md:text-[32px]">
                             Common<br />
-                            <em>questions.</em>
+                            <em className="italic">questions.</em>
                         </h2>
                     </motion.div>
 
-                    <div className={styles.list}>
+                    <div>
                         {faqs.map((faq, i) => (
                             <motion.div
                                 key={i}
-                                className={styles.item}
+                                className="border-b border-border first:border-t"
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.05 }}
                             >
                                 <button
-                                    className={styles.question}
+                                    className="flex justify-between items-center w-full py-6 text-base font-medium text-left text-text max-md:text-[15px] max-md:py-5"
                                     onClick={() => setOpen(open === i ? null : i)}
                                 >
                                     {faq.q}
-                                    <span className={`${styles.icon} ${open === i ? styles.open : ""}`}>
+                                    <span className={`text-xl text-text-muted transition-transform duration-200 ${open === i ? "rotate-45" : ""}`}>
                                         +
                                     </span>
                                 </button>
                                 <AnimatePresence>
                                     {open === i && (
                                         <motion.div
-                                            className={styles.answer}
+                                            className="overflow-hidden"
                                             initial={{ height: 0, opacity: 0 }}
                                             animate={{ height: "auto", opacity: 1 }}
                                             exit={{ height: 0, opacity: 0 }}
                                             transition={{ duration: 0.25 }}
                                         >
-                                            <p>{faq.a}</p>
+                                            <p className="pb-6 text-[15px] leading-[1.6] text-text-secondary">{faq.a}</p>
                                         </motion.div>
                                     )}
                                 </AnimatePresence>

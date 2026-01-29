@@ -1,28 +1,19 @@
+@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap');
 
-:root {
-  /* Colors */
-  --bg: #FCFCFC;
-  --bg-alt: #F7F7F7;
-  --border: #EBEBEB;
+@theme {
+  --color-bg: #FCFCFC;
+  --color-bg-alt: #F7F7F7;
+  --color-border: #EBEBEB;
+  --color-text: #1A1A1A;
+  --color-text-secondary: #666666;
+  --color-text-muted: #999999;
 
-  --text: #1A1A1A;
-  --text-secondary: #666666;
-  --text-muted: #999999;
+  --font-family-sans: 'Inter', -apple-system, sans-serif;
+  --font-family-serif: 'Newsreader', Georgia, serif;
 
-  /* Typography */
-  --font-sans: 'Inter', -apple-system, sans-serif;
-  --font-serif: 'Newsreader', Georgia, serif;
-
-  /* Spacing */
-  --space-section: 160px;
-  --max-width: 1200px;
-
-  /* Transitions */
-  --ease: cubic-bezier(0.4, 0, 0.2, 1);
-
-  /* Radius */
-  --radius: 8px;
+  --spacing-section: 160px;
+  --max-width-container: 1200px;
 }
 
 * {
@@ -36,9 +27,9 @@ html {
 }
 
 body {
-  font-family: var(--font-sans);
-  background: var(--bg);
-  color: var(--text);
+  font-family: var(--font-family-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -67,12 +58,12 @@ button {
   padding: 14px 28px;
   font-size: 14px;
   font-weight: 500;
-  border-radius: var(--radius);
-  transition: all 0.25s var(--ease);
+  border-radius: 8px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-primary {
-  background: var(--text);
+  background: var(--color-text);
   color: white;
 }
 
@@ -82,10 +73,10 @@ button {
 }
 
 .btn-outline {
-  border: 1px solid var(--border);
-  color: var(--text);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
 }
 
 .btn-outline:hover {
-  border-color: var(--text);
+  border-color: var(--color-text);
 }

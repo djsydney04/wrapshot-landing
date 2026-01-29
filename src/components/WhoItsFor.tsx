@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Briefcase, LineChart, Users, Film } from "lucide-react";
-import styles from "./WhoItsFor.module.css";
 
 const audiences = [
     {
@@ -33,33 +32,33 @@ const audiences = [
 
 export default function WhoItsFor() {
     return (
-        <section className={styles.section}>
-            <div className={styles.container}>
+        <section className="py-section">
+            <div className="max-w-container mx-auto px-12">
                 <motion.div
-                    className={styles.header}
+                    className="text-center mb-16"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className={styles.sectionTitle}>
+                    <h2 className="font-serif text-[40px] font-normal max-w-2xl mx-auto">
                         Made for the people who make movies happen
                     </h2>
                 </motion.div>
 
-                <div className={styles.grid}>
+                <div className="grid grid-cols-2 gap-8 max-md:grid-cols-1">
                     {audiences.map((audience, index) => (
                         <motion.div
                             key={index}
-                            className={styles.card}
+                            className="p-8 border border-border rounded-xl"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                         >
-                            <div className={styles.cardIcon}>{audience.icon}</div>
-                            <h3 className={styles.cardTitle}>{audience.title}</h3>
-                            <p className={styles.cardDescription}>{audience.description}</p>
+                            <div className="mb-4 text-text">{audience.icon}</div>
+                            <h3 className="text-lg font-medium mb-2">{audience.title}</h3>
+                            <p className="text-sm text-text-secondary leading-relaxed">{audience.description}</p>
                         </motion.div>
                     ))}
                 </div>

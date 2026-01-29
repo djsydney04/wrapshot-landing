@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import styles from "./Testimonials.module.css";
 
 const testimonials = [
     {
@@ -26,34 +25,34 @@ const testimonials = [
 
 export default function Testimonials() {
     return (
-        <section className={styles.section}>
-            <div className={styles.container}>
+        <section className="py-section bg-bg-alt">
+            <div className="max-w-container mx-auto px-12">
                 <motion.div
-                    className={styles.header}
+                    className="text-center mb-16"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className={styles.sectionTitle}>Loved by production teams</h2>
+                    <h2 className="font-serif text-[40px] font-normal">Loved by production teams</h2>
                 </motion.div>
-                <div className={styles.grid}>
+                <div className="grid grid-cols-3 gap-6 max-lg:grid-cols-1">
                     {testimonials.map((testimonial, index) => (
                         <motion.div
                             key={index}
-                            className={styles.card}
+                            className="p-8 bg-white border border-border rounded-xl"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
                         >
-                            <p className={styles.quote}>&ldquo;{testimonial.quote}&rdquo;</p>
-                            <div className={styles.author}>
-                                <div className={styles.avatar}>
+                            <p className="text-base leading-relaxed mb-6">&ldquo;{testimonial.quote}&rdquo;</p>
+                            <div className="flex items-center gap-3">
+                                <div className="w-10 h-10 rounded-full bg-bg-alt flex items-center justify-center text-sm font-medium">
                                     {testimonial.author.split(" ").map(n => n[0]).join("")}
                                 </div>
-                                <div className={styles.authorInfo}>
-                                    <p className={styles.authorName}>{testimonial.author}</p>
-                                    <p className={styles.authorRole}>
+                                <div>
+                                    <p className="text-sm font-medium">{testimonial.author}</p>
+                                    <p className="text-xs text-text-muted">
                                         {testimonial.role} · {testimonial.production}
                                     </p>
                                 </div>

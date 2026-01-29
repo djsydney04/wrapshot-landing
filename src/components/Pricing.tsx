@@ -1,14 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import styles from "./Pricing.module.css";
 
 const tiers = [
     {
         name: "Free",
         price: "$0",
         note: "forever",
-        features: ["Up to 10 shooting days", "Unlimited team", "Basic call sheets"],
+        features: ["1 project", "Up to 5 team members", "Basic call sheets", "Script management"],
         cta: "Get Started",
         primary: false,
     },
@@ -16,7 +15,7 @@ const tiers = [
         name: "Pro",
         price: "$49",
         note: "/month",
-        features: ["Unlimited days", "Advanced call sheets", "Day-out-of-days", "Crew notifications"],
+        features: ["Unlimited projects", "Unlimited team", "Advanced call sheets", "Day-out-of-days", "Crew notifications"],
         cta: "Get Started",
         primary: true,
     },
@@ -24,7 +23,7 @@ const tiers = [
         name: "Studio",
         price: "Custom",
         note: "contact us",
-        features: ["Everything in Pro", "Multi-project", "SSO & security", "Dedicated support"],
+        features: ["Everything in Pro", "SSO & security", "Dedicated support", "Priority onboarding"],
         cta: "Contact",
         primary: false,
     },
@@ -32,44 +31,51 @@ const tiers = [
 
 export default function Pricing() {
     return (
-        <section id="pricing" className={styles.section}>
-            <div className={styles.inner}>
+        <section id="pricing" className="py-section bg-bg-alt">
+            <div className="max-w-container mx-auto px-12">
                 <motion.div
-                    className={styles.header}
+                    className="mb-16"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <p className={styles.label}>Pricing</p>
-                    <h2 className={styles.headline}>
+                    <p className="text-xs uppercase tracking-[0.1em] text-text-muted mb-4">Pricing</p>
+                    <h2 className="font-serif text-[40px] font-normal leading-[1.15]">
                         Start free,<br />
-                        <em>upgrade when ready.</em>
+                        <em className="italic">upgrade when ready.</em>
                     </h2>
                 </motion.div>
 
-                <div className={styles.grid}>
+                <div className="grid grid-cols-3 gap-6 max-lg:grid-cols-1 max-lg:max-w-[400px]">
                     {tiers.map((tier, i) => (
                         <motion.div
                             key={tier.name}
-                            className={`${styles.card} ${tier.primary ? styles.primary : ""}`}
+                            className={`flex flex-col p-8 bg-white border rounded-xl ${tier.primary ? "border-text" : "border-border"
+                                }`}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.1 }}
                         >
-                            <div className={styles.cardTop}>
-                                <h3 className={styles.tierName}>{tier.name}</h3>
-                                <div className={styles.priceRow}>
-                                    <span className={styles.price}>{tier.price}</span>
-                                    <span className={styles.note}>{tier.note}</span>
+                            <div className="mb-7">
+                                <h3 className="text-sm font-medium mb-2">{tier.name}</h3>
+                                <div className="flex items-baseline gap-1.5">
+                                    <span className="font-serif text-4xl font-normal">{tier.price}</span>
+                                    <span className="text-[13px] text-text-muted">{tier.note}</span>
                                 </div>
                             </div>
-                            <ul className={styles.features}>
+                            <ul className="flex-1 mb-7">
                                 {tier.features.map((f, j) => (
-                                    <li key={j}>{f}</li>
+                                    <li key={j} className="text-sm text-text-secondary py-2 border-b border-border last:border-b-0">{f}</li>
                                 ))}
                             </ul>
-                            <a href="https://app.wrapshoot.com" className={styles.cta}>
+                            <a
+                                href="https://app.wrapshoot.com"
+                                className={`block text-center px-3 py-3 text-sm font-medium border rounded-md transition-all duration-200 ${tier.primary
+                                        ? "bg-text text-white border-text hover:opacity-90"
+                                        : "border-border hover:border-text"
+                                    }`}
+                            >
                                 {tier.cta}
                             </a>
                         </motion.div>

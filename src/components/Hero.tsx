@@ -1,31 +1,23 @@
 "use client";
 
 import { motion } from "framer-motion";
-import styles from "./Hero.module.css";
-
-const features = [
-    {
-        title: "Crew Coordination",
-        description: "Keep everyone aligned with real-time updates and call sheets",
-    },
-];
 
 export default function Hero() {
     return (
-        <section className={styles.hero}>
-            <div className={styles.inner}>
+        <section className="min-h-auto flex items-center pt-[140px] pb-[100px] overflow-hidden relative bg-[#FAFAFA]">
+            <div className="max-w-container mx-auto px-12 relative w-full">
                 <motion.div
-                    className={styles.content}
+                    className="max-w-[640px] text-center mx-auto"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
                 >
-                    <h1 className={styles.headline}>
+                    <h1 className="font-serif text-[60px] font-normal leading-[1.1] tracking-[-0.025em] mb-6 text-text">
                         Schedule smarter.
                         <br />
-                        <em>Wrap on time.</em>
+                        <em className="italic">Wrap on time.</em>
                     </h1>
-                    <p className={styles.subline}>
+                    <p className="text-[19px] leading-[1.6] text-text-secondary mb-10 max-w-[480px] mx-auto">
                         End-to-end software built for film and TV production.
                         Organize your crew, schedule your shoots, and wrap on time.
                     </p>
