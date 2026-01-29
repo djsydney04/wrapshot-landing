@@ -39,20 +39,6 @@ export default function Hero() {
                         </a>
                     </motion.div>
                 </motion.div>
-
-                <motion.ul
-                    className={styles.featureList}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 0.5 }}
-                >
-                    {features.map((feature) => (
-                        <li key={feature.title} className={styles.featureItem}>
-                            <h3 className={styles.featureTitle}>{feature.title}</h3>
-                            <p className={styles.featureDescription}>{feature.description}</p>
-                        </li>
-                    ))}
-                </motion.ul>
             </div>
         </section>
     );
