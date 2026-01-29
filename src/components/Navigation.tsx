@@ -28,7 +28,7 @@ export default function Navigation() {
                     <a href="#pricing">Pricing</a>
                 </div>
 
-                <a href="/signup" className={styles.cta}>Get Started</a>
+                <a href="https://app.wrapshoot.com" className={styles.cta}>Get Started</a>
             </div>
         </motion.nav>
     );

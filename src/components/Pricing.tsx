@@ -69,7 +69,7 @@ export default function Pricing() {
                                     <li key={j}>{f}</li>
                                 ))}
                             </ul>
-                            <a href="/signup" className={styles.cta}>
+                            <a href="https://app.wrapshoot.com" className={styles.cta}>
                                 {tier.cta}
                             </a>
                         </motion.div>

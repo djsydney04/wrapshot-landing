@@ -20,7 +20,7 @@ export default function FinalCTA() {
                     <p className={styles.subline}>
                         Free for small productions. No credit card.
                     </p>
-                    <a href="/signup" className="btn btn-primary">
+                    <a href="https://app.wrapshoot.com" className="btn btn-primary">
                         Get Started
                     </a>
                 </motion.div>
