@@ -26,8 +26,8 @@ export default function Hero() {
                         <em>Wrap on time.</em>
                     </h1>
                     <p className={styles.subline}>
-                        The first AI scheduling tool built for film and TV production.
-                        Turn your script into an optimized shooting schedule in minutes.
+                        End-to-end software built for film and TV production.
+                        Organize your crew, schedule your shoots, and wrap on time.
                     </p>
                     <motion.div
                         initial={{ opacity: 0 }}
