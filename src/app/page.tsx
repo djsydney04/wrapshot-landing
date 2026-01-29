@@ -1,5 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import ProblemSolution from "@/components/ProblemSolution";
+import Features from "@/components/Features";
+import WhoItsFor from "@/components/WhoItsFor";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
@@ -11,6 +14,9 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
+        <ProblemSolution />
+        <Features />
+        <WhoItsFor />
         <Pricing />
         <FAQ />
         <FinalCTA />

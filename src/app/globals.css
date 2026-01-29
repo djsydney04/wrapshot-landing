@@ -1,20 +1,6 @@
-@import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap');
-
-@theme {
-  --color-bg: #FCFCFC;
-  --color-bg-alt: #F7F7F7;
-  --color-border: #EBEBEB;
-  --color-text: #1A1A1A;
-  --color-text-secondary: #666666;
-  --color-text-muted: #999999;
-
-  --font-family-sans: 'Inter', -apple-system, sans-serif;
-  --font-family-serif: 'Newsreader', Georgia, serif;
-
-  --spacing-section: 160px;
-  --max-width-container: 1200px;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
   box-sizing: border-box;
@@ -27,9 +13,9 @@ html {
 }
 
 body {
-  font-family: var(--font-family-sans);
-  background: var(--color-bg);
-  color: var(--color-text);
+  font-family: var(--font-inter), -apple-system, sans-serif;
+  background: #FCFCFC;
+  color: #1A1A1A;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -63,7 +49,7 @@ button {
 }
 
 .btn-primary {
-  background: var(--color-text);
+  background: #1A1A1A;
   color: white;
 }
 
@@ -73,10 +59,10 @@ button {
 }
 
 .btn-outline {
-  border: 1px solid var(--color-border);
-  color: var(--color-text);
+  border: 1px solid #EBEBEB;
+  color: #1A1A1A;
 }
 
 .btn-outline:hover {
-  border-color: var(--color-text);
+  border-color: #1A1A1A;
 }
