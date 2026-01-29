@@ -41,16 +41,13 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                 >
-                    <div className="aspect-[16/10] bg-zinc-900 relative group overflow-hidden">
-                        <img
-                            src="/platform_screenshot_placeholder.png"
-                            alt="Wrapshoot Platform Interface"
-                            className="w-full h-full object-cover object-top opacity-95 group-hover:opacity-100 transition-opacity duration-700"
+                    <div className="aspect-[16/9] bg-zinc-900 relative group overflow-hidden">
+                        <iframe
+                            src="https://player.mux.com/5qO2F2AZ7Y7OvUXgdgp02AmhFmGnP6TeLR39twNdCwh8?autoplay=muted&loop=true&controls=false"
+                            style={{ width: '100%', height: '100%', border: 'none' }}
+                            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                            allowFullScreen
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
-
-                        {/* Shimmer effect */}
-                        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none"></div>
                     </div>
                 </motion.div>
             </div>
