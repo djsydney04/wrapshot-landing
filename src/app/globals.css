@@ -66,3 +66,46 @@ button {
 .btn-outline:hover {
   border-color: #1A1A1A;
 }
+
+/* Learn page prose styles */
+.prose-custom h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  color: #1A1A1A;
+}
+
+.prose-custom h3:first-child {
+  margin-top: 0;
+}
+
+.prose-custom h4 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #1A1A1A;
+}
+
+.prose-custom p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666666;
+  margin-bottom: 16px;
+}
+
+.prose-custom ul,
+.prose-custom ol {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666666;
+}
+
+.prose-custom strong {
+  color: #1A1A1A;
+  font-weight: 500;
+}
+
+.prose-custom kbd {
+  font-family: var(--font-inter), -apple-system, sans-serif;
+}

@@ -4,34 +4,34 @@ import { motion } from "framer-motion";
 
 const features = [
     {
-        num: "01",
-        title: "Project Dashboard",
-        description: "All your productions in one view. Track progress across development, pre-production, shooting, and post. Set dates, add notes, see what stage each project is in.",
+        title: "Multiple Scheduling Views",
+        description:
+            "Switch between grid, kanban, timeline, and list views. Whatever fits your workflow — the data stays in sync.",
     },
     {
-        num: "02",
-        title: "Script & Breakdown",
-        description: "Upload script versions with industry-standard color codes. Break down every scene—assign cast, locations, props, wardrobe, VFX, and more.",
+        title: "Confidence Ratings on Suggestions",
+        description:
+            "Every auto-detected element comes with a confidence score. Accept what's right, dismiss what isn't — you're always in control.",
     },
     {
-        num: "03",
-        title: "Cast & Locations",
-        description: "Store contacts, track contracts and availability, manage permits. Know who's confirmed, what locations are approved, and set backups.",
+        title: "Real-Time Collaboration",
+        description:
+            "Invite your team with role-based permissions. Changes sync instantly so everyone's working from the same source of truth.",
     },
     {
-        num: "04",
-        title: "Smart Scheduling",
-        description: "Drag scenes to shooting days. View as calendar, stripboard, or kanban. Set call times per actor. Conflicts flagged automatically.",
+        title: "Receipt OCR & Expense Logging",
+        description:
+            "Snap a photo of a receipt and let OCR pull the details. Expenses tie directly to your budget categories.",
     },
     {
-        num: "05",
-        title: "Call Sheets",
-        description: "Generate call sheets in one click. Cast, crew, scenes, locations, safety info—all included. Export to PDF or send directly.",
+        title: "Industry-Standard Formatting",
+        description:
+            "Page counts in eighths, color-coded script revisions, and call sheets that match what your crew already expects.",
     },
     {
-        num: "06",
-        title: "Team Coordination",
-        description: "Invite crew by department. Set permissions for who can view or edit. Day-out-of-days, availability, and contacts—all visible to who needs it.",
+        title: "PDF Export & Distribution",
+        description:
+            "Generate call sheets, schedules, and reports as clean PDFs ready to share with your entire production.",
     },
 ];
 
@@ -39,28 +39,38 @@ export default function Features() {
     return (
         <section id="features" className="py-section">
             <div className="max-w-container mx-auto px-12">
-                <motion.p
-                    className="text-xs uppercase tracking-[0.1em] text-text-muted mb-4"
+                <motion.div
+                    className="mb-16"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                 >
-                    What you get
-                </motion.p>
+                    <p className="text-xs uppercase tracking-[0.1em] text-text-muted mb-4">
+                        What you get
+                    </p>
+                    <h2 className="font-serif text-[40px] font-normal leading-[1.15] max-w-xl max-md:text-[32px]">
+                        Built for how
+                        <br />
+                        <em className="italic">productions actually work.</em>
+                    </h2>
+                </motion.div>
 
-                <div className="grid grid-cols-2 gap-12 max-md:grid-cols-1">
+                <div className="grid grid-cols-3 gap-6 max-md:grid-cols-1">
                     {features.map((f, i) => (
                         <motion.div
-                            key={f.num}
-                            className=""
+                            key={f.title}
+                            className="p-8 rounded-xl border border-border bg-white"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: i * 0.1, duration: 0.5 }}
+                            transition={{ delay: i * 0.05, duration: 0.5 }}
                         >
-                            <span className="text-xs text-text-muted mb-2 block">{f.num}</span>
-                            <h3 className="text-lg font-medium mb-2">{f.title}</h3>
-                            <p className="text-sm text-text-secondary leading-relaxed">{f.description}</p>
+                            <h3 className="text-lg font-medium mb-3 text-text">
+                                {f.title}
+                            </h3>
+                            <p className="text-sm leading-relaxed text-text-secondary">
+                                {f.description}
+                            </p>
                         </motion.div>
                     ))}
                 </div>

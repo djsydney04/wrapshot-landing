@@ -13,15 +13,20 @@ export default function FinalCTA() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="font-serif text-[40px] font-normal leading-[1.15] mb-4">
-                        Ready to try it?
+                    <h2 className="font-serif text-[40px] font-normal leading-[1.15] mb-4 max-md:text-[32px]">
+                        Ready to start your production?
                     </h2>
                     <p className="text-lg text-text-secondary mb-8">
-                        Free for small productions. No credit card.
+                        Free for your first project. No credit card required.
                     </p>
-                    <a href="https://app.wrapshoot.com" className="btn btn-primary">
-                        Get Started
-                    </a>
+                    <div className="flex items-center justify-center gap-4 max-md:flex-col">
+                        <a href="https://app.wrapshot.com" className="btn btn-primary">
+                            Start Your Production Free
+                        </a>
+                        <a href="mailto:hello@wrapshot.com" className="btn btn-outline">
+                            Talk to Sales
+                        </a>
+                    </div>
                 </motion.div>
             </div>
         </section>

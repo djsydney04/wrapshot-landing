@@ -14,9 +14,10 @@ export default function ProblemSolution() {
                     transition={{ duration: 0.6 }}
                 >
                     <p className="text-xl leading-relaxed text-text-secondary">
-                        Production scheduling is still stuck in spreadsheets and legacy software.
-                        Wrapshoot brings your stripboard, call sheets, and team into one place—so
-                        when things change, everything stays in sync.
+                        Wrapshot combines traditional film production tools with modern workflow automation
+                        to help indie filmmakers and production teams plan, schedule, and execute their
+                        projects efficiently. Your stripeboard, call sheets, breakdowns, budgets, and team—all in
+                        one place, all in sync, all in real-time.
                     </p>
                 </motion.div>
             </div>

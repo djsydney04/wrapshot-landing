@@ -15,22 +15,25 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
                 >
-                    <h1 className="font-serif text-[64px] font-normal leading-[1.1] tracking-[-0.02em] mb-6 text-text">
-                        Schedule smarter.
+                    <h1 className="font-serif text-[64px] font-normal leading-[1.1] tracking-[-0.02em] mb-6 text-text max-md:text-[44px]">
+                        From script to screen,
                         <br />
-                        <em className="italic">Wrap on time.</em>
+                        <em className="italic">beautifully organized.</em>
                     </h1>
-                    <p className="text-[20px] leading-[1.6] text-text-secondary mb-10 max-w-[520px] mx-auto">
-                        End-to-end software built for film and TV production.
-                        Organize your crew, schedule your shoots, and wrap on time.
+                    <p className="text-[20px] leading-[1.6] text-text-secondary mb-10 max-w-[560px] mx-auto max-md:text-[18px]">
+                        The all-in-one film production platform. Scheduling, breakdowns, call sheets, budgets, and team collaboration—all in one place to plan, schedule, and execute your projects efficiently.
                     </p>
                     <motion.div
+                        className="flex items-center justify-center gap-4 max-md:flex-col"
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2, duration: 0.5 }}
                     >
-                        <a href="https://app.wrapshoot.com" className="btn btn-primary shadow-lg shadow-black/5 hover:shadow-xl hover:shadow-black/10 transition-all">
-                            Start for free
+                        <a href="https://app.wrapshot.com" className="btn btn-primary shadow-lg shadow-black/5 hover:shadow-xl hover:shadow-black/10 transition-all">
+                            Start Your Production Free
+                        </a>
+                        <a href="#how-it-works" className="btn btn-outline">
+                            See How It Works
                         </a>
                     </motion.div>
                 </motion.div>

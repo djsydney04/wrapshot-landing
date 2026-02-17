@@ -6,19 +6,35 @@ import { motion, AnimatePresence } from "framer-motion";
 const faqs = [
     {
         q: "Is there a free plan?",
-        a: "Yes. Productions with 10 or fewer shooting days can use Wrapshoot free, forever.",
+        a: "Yes! Our Free plan lets you manage 1 project with up to 3 team members. It includes basic scene management and community support—perfect for getting started.",
     },
     {
-        q: "How long to get started?",
-        a: "Most teams are running in under an hour. Import your breakdown or start fresh.",
+        q: "How long does it take to get started?",
+        a: "Most teams are up and running in under an hour. Upload your script for automatic analysis, or start from scratch and build your production manually.",
     },
     {
-        q: "Can I import existing data?",
-        a: "We support Movie Magic, Final Draft, and common spreadsheet formats.",
+        q: "Can I import data from other software?",
+        a: "Currently, Wrapshot supports PDF script import with automatic analysis. We extract scenes, elements, and more automatically. CSV import for cast/crew is planned for a future update.",
     },
     {
-        q: "Who needs a license?",
-        a: "Nobody. All plans include unlimited team members.",
+        q: "Is my data secure?",
+        a: "Absolutely. All data is encrypted in transit and at rest. We use industry-standard security practices and secure cloud infrastructure to protect your productions.",
+    },
+    {
+        q: "Can multiple people edit at the same time?",
+        a: "Yes! Wrapshot supports real-time collaboration. Changes sync instantly across all team members, so everyone is always on the same page.",
+    },
+    {
+        q: "How does script analysis work?",
+        a: "Upload your script PDF and Wrapshot automatically extracts scenes, detects INT/EXT and DAY/NIGHT, identifies production elements like props and wardrobe, generates synopses, and estimates shooting times. Review and accept suggestions with a click.",
+    },
+    {
+        q: "What can I export?",
+        a: "You can export call sheets as PDF, budget reports, and more export options are coming soon. Everything is designed to integrate smoothly with your existing workflow.",
+    },
+    {
+        q: "Do I need technical knowledge to use Wrapshot?",
+        a: "Not at all. Wrapshot is designed for filmmakers, not tech experts. The interface is intuitive and mirrors traditional film production workflows you already know.",
     },
 ];
 

@@ -17,9 +17,9 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-  title: "Wrapshoot — Modern Film Production Scheduling",
-  description: "Production management for modern filmmakers. Stripboard, call sheets, and crew coordination in one intuitive platform.",
-  keywords: ["film scheduling", "production scheduling", "call sheets", "stripboard", "movie production software", "wrapshoot", "film production", "filmmakers"],
+  title: "Wrapshot — The All-in-One Film Production Platform",
+  description: "From script to screen, beautifully organized. Wrapshot combines traditional film production tools with modern workflow automation to help indie filmmakers and production teams plan, schedule, and execute their projects efficiently.",
+  keywords: ["film scheduling", "production scheduling", "call sheets", "stripboard", "movie production software", "wrapshot", "film production", "filmmakers", "script analysis", "scene breakdown"],
   icons: {
     icon: "https://hhmdkkkpaukfcwfmdxyl.supabase.co/storage/v1/object/public/logo/logo.svg",
     shortcut: "https://hhmdkkkpaukfcwfmdxyl.supabase.co/storage/v1/object/public/logo/logo.svg",
@@ -27,17 +27,17 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
   openGraph: {
-    title: "Wrapshoot — Modern Film Production Scheduling",
-    description: "Production management for modern filmmakers.",
+    title: "Wrapshot — The All-in-One Film Production Platform",
+    description: "From script to screen, beautifully organized.",
     type: "website",
-    siteName: "Wrapshoot",
+    siteName: "Wrapshot",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wrapshoot",
-    description: "Production management for modern filmmakers.",
+    title: "Wrapshot",
+    description: "From script to screen, beautifully organized.",
   },
-  applicationName: "Wrapshoot",
+  applicationName: "Wrapshot",
 };
 
 export default function RootLayout({
