@@ -43,7 +43,7 @@ export default function PrivacyPage() {
                         <Section title="1. Introduction">
                             <p>
                                 Wrapshot (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates the Wrapshot platform, including the website
-                                at wrapshot.com and the application at app.wrapshot.com (collectively, the &quot;Service&quot;).
+                                at wrapshoot.com and the application at app.wrapshoot.com (collectively, the &quot;Service&quot;).
                                 This Privacy Policy explains how we collect, use, disclose, and safeguard your information
                                 when you use our Service.
                             </p>
@@ -175,7 +175,7 @@ export default function PrivacyPage() {
                             </ul>
                             <p>
                                 To exercise any of these rights, please contact us at{" "}
-                                <a href="mailto:support@wrapshot.com" className="text-text font-medium hover:underline">support@wrapshot.com</a>.
+                                <a href="mailto:support@wrapshoot.com" className="text-text font-medium hover:underline">support@wrapshoot.com</a>.
                                 We will respond to your request within 30 days.
                             </p>
                         </Section>
@@ -223,8 +223,8 @@ export default function PrivacyPage() {
                         <Section title="11. Contact Us">
                             <p>If you have any questions about this Privacy Policy, please contact us:</p>
                             <ul className="list-disc list-inside space-y-2 mb-6">
-                                <li>Email: <a href="mailto:support@wrapshot.com" className="text-text font-medium hover:underline">support@wrapshot.com</a></li>
-                                <li>General inquiries: <a href="mailto:hello@wrapshot.com" className="text-text font-medium hover:underline">hello@wrapshot.com</a></li>
+                                <li>Email: <a href="mailto:support@wrapshoot.com" className="text-text font-medium hover:underline">support@wrapshoot.com</a></li>
+                                <li>General inquiries: <a href="mailto:hello@wrapshoot.com" className="text-text font-medium hover:underline">hello@wrapshoot.com</a></li>
                             </ul>
                         </Section>
                     </div>

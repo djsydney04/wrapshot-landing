@@ -29,7 +29,7 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2, duration: 0.5 }}
                     >
-                        <a href="https://app.wrapshot.com" className="btn btn-primary shadow-lg shadow-black/5 hover:shadow-xl hover:shadow-black/10 transition-all">
+                        <a href="https://app.wrapshoot.com" className="btn btn-primary shadow-lg shadow-black/5 hover:shadow-xl hover:shadow-black/10 transition-all">
                             Start Your Production Free
                         </a>
                         <a href="#how-it-works" className="btn btn-outline">

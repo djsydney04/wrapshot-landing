@@ -29,7 +29,7 @@ export default function Navigation() {
                     <a href="/learn" className="text-sm text-text-secondary hover:text-text transition-colors duration-200">User Guide</a>
                 </div>
 
-                <a href="https://app.wrapshot.com" className="text-sm font-medium px-5 py-2.5 bg-text text-white rounded hover:opacity-85 transition-opacity duration-200">Get Started</a>
+                <a href="https://app.wrapshoot.com" className="text-sm font-medium px-5 py-2.5 bg-text text-white rounded hover:opacity-85 transition-opacity duration-200">Get Started</a>
             </div>
         </motion.nav>
     );

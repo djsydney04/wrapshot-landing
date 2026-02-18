@@ -636,19 +636,19 @@ export default function LearnPage() {
                                 <h3>Contact Support</h3>
                                 <p>For additional help:</p>
                                 <ul className="list-disc list-inside space-y-2 mb-6">
-                                    <li>Email: <a href="mailto:support@wrapshot.com" className="text-text font-medium hover:underline">support@wrapshot.com</a></li>
+                                    <li>Email: <a href="mailto:support@wrapshoot.com" className="text-text font-medium hover:underline">support@wrapshoot.com</a></li>
                                     <li>Check our FAQ section above</li>
                                 </ul>
                             </div>
                             <div className="flex gap-4 max-md:flex-col">
                                 <a
-                                    href="mailto:support@wrapshot.com"
+                                    href="mailto:support@wrapshoot.com"
                                     className="btn btn-outline"
                                 >
                                     Contact Support
                                 </a>
                                 <a
-                                    href="https://app.wrapshot.com"
+                                    href="https://app.wrapshoot.com"
                                     className="btn btn-primary"
                                 >
                                     Start Your Production

@@ -20,10 +20,10 @@ export default function FinalCTA() {
                         Free for your first project. No credit card required.
                     </p>
                     <div className="flex items-center justify-center gap-4 max-md:flex-col">
-                        <a href="https://app.wrapshot.com" className="btn btn-primary">
+                        <a href="https://app.wrapshoot.com" className="btn btn-primary">
                             Start Your Production Free
                         </a>
-                        <a href="mailto:hello@wrapshot.com" className="btn btn-outline">
+                        <a href="mailto:hello@wrapshoot.com" className="btn btn-outline">
                             Talk to Sales
                         </a>
                     </div>

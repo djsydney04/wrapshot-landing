@@ -12,7 +12,7 @@ export default function Footer() {
                         <a href="#pricing" className="text-sm text-text-secondary hover:text-text transition-colors">Pricing</a>
                         <a href="/learn" className="text-sm text-text-secondary hover:text-text transition-colors">User Guide</a>
                         <a href="#faq" className="text-sm text-text-secondary hover:text-text transition-colors">FAQ</a>
-                        <a href="mailto:hello@wrapshot.com" className="text-sm text-text-secondary hover:text-text transition-colors">Contact</a>
+                        <a href="mailto:hello@wrapshoot.com" className="text-sm text-text-secondary hover:text-text transition-colors">Contact</a>
                     </div>
                 </div>
 

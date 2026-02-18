@@ -96,7 +96,7 @@ export default function Pricing() {
                                 ))}
                             </ul>
                             <a
-                                href={tier.name === "Studio" ? "mailto:hello@wrapshot.com" : "https://app.wrapshot.com"}
+                                href={tier.name === "Studio" ? "mailto:hello@wrapshoot.com" : "https://app.wrapshoot.com"}
                                 className={`block text-center px-3 py-3 text-sm font-medium border rounded-md transition-all duration-200 ${tier.primary
                                         ? "bg-text text-white border-text hover:opacity-90"
                                         : "border-border hover:border-text"

@@ -42,8 +42,8 @@ export default function TermsPage() {
                     <div className="space-y-16">
                         <Section title="1. Acceptance of Terms">
                             <p>
-                                By accessing or using the Wrapshot platform, including the website at wrapshot.com and
-                                the application at app.wrapshot.com (collectively, the &quot;Service&quot;), you agree to be bound
+                                By accessing or using the Wrapshot platform, including the website at wrapshoot.com and
+                                the application at app.wrapshoot.com (collectively, the &quot;Service&quot;), you agree to be bound
                                 by these Terms of Service (&quot;Terms&quot;). If you do not agree to these Terms, you may not
                                 access or use the Service.
                             </p>
@@ -269,8 +269,8 @@ export default function TermsPage() {
                         <Section title="15. Contact Us">
                             <p>If you have any questions about these Terms, please contact us:</p>
                             <ul className="list-disc list-inside space-y-2 mb-6">
-                                <li>Email: <a href="mailto:support@wrapshot.com" className="text-text font-medium hover:underline">support@wrapshot.com</a></li>
-                                <li>General inquiries: <a href="mailto:hello@wrapshot.com" className="text-text font-medium hover:underline">hello@wrapshot.com</a></li>
+                                <li>Email: <a href="mailto:support@wrapshoot.com" className="text-text font-medium hover:underline">support@wrapshoot.com</a></li>
+                                <li>General inquiries: <a href="mailto:hello@wrapshoot.com" className="text-text font-medium hover:underline">hello@wrapshoot.com</a></li>
                             </ul>
                         </Section>
                     </div>
