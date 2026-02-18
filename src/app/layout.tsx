@@ -17,6 +17,7 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://wrapshot.com"),
   title: "Wrapshot — The All-in-One Film Production Platform",
   description: "From script to screen, beautifully organized. Wrapshot combines traditional film production tools with modern workflow automation to help indie filmmakers and production teams plan, schedule, and execute their projects efficiently.",
   keywords: ["film scheduling", "production scheduling", "call sheets", "stripboard", "movie production software", "wrapshot", "film production", "filmmakers", "script analysis", "scene breakdown"],
@@ -29,6 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Wrapshot — The All-in-One Film Production Platform",
     description: "From script to screen, beautifully organized.",
+    url: "https://wrapshot.com",
     type: "website",
     siteName: "Wrapshot",
   },
