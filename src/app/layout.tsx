@@ -33,11 +33,20 @@ export const metadata: Metadata = {
     url: "https://wrapshot.com",
     type: "website",
     siteName: "Wrapshot",
+    images: [
+      {
+        url: "https://hhmdkkkpaukfcwfmdxyl.supabase.co/storage/v1/object/public/logo/sharephoto.png",
+        width: 1200,
+        height: 630,
+        alt: "Wrapshot — The All-in-One Film Production Platform",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Wrapshot",
     description: "From script to screen, beautifully organized.",
+    images: ["https://hhmdkkkpaukfcwfmdxyl.supabase.co/storage/v1/object/public/logo/sharephoto.png"],
   },
   applicationName: "Wrapshot",
 };
