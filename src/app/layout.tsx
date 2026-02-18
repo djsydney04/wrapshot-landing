@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "Wrapshot",
     images: [
       {
-        url: "https://hhmdkkkpaukfcwfmdxyl.supabase.co/storage/v1/object/public/logo/sharephoto.png",
+        url: "https://hhmdkkkpaukfcwfmdxyl.supabase.co/storage/v1/object/public/logo/Blue%20Playful%20Closed%20Due%20To%20Weather%20Facebook%20Post%20(2).png",
         width: 1200,
         height: 630,
         alt: "Wrapshot — The All-in-One Film Production Platform",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Wrapshot",
     description: "From script to screen, beautifully organized.",
-    images: ["https://hhmdkkkpaukfcwfmdxyl.supabase.co/storage/v1/object/public/logo/sharephoto.png"],
+    images: ["https://hhmdkkkpaukfcwfmdxyl.supabase.co/storage/v1/object/public/logo/Blue%20Playful%20Closed%20Due%20To%20Weather%20Facebook%20Post%20(2).png"],
   },
   applicationName: "Wrapshot",
 };
