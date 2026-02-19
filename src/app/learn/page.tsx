@@ -66,7 +66,7 @@ export default function LearnPage() {
             <header className="fixed top-0 left-0 right-0 z-50 bg-bg/90 backdrop-blur-[20px] border-b border-border">
                 <div className="max-w-[1400px] mx-auto px-6 py-4 flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                        <Link href="/" className="font-serif text-xl font-medium">Wrapshot</Link>
+                        <Link href="/" className="font-serif text-xl font-medium">Wrapshoot</Link>
                         <span className="text-text-muted">/</span>
                         <span className="text-sm font-medium">User Guide</span>
                     </div>
@@ -148,10 +148,10 @@ export default function LearnPage() {
                             animate={{ opacity: 1, y: 0 }}
                         >
                             <h1 className="font-serif text-[48px] font-normal leading-[1.1] mb-4 max-md:text-[36px]">
-                                Wrapshot User Guide
+                                Wrapshoot User Guide
                             </h1>
                             <p className="text-xl text-text-secondary leading-relaxed">
-                                Your complete guide to managing film productions with Wrapshot.
+                                Your complete guide to managing film productions with Wrapshoot.
                                 From your first project to wrapping your shoot—we&apos;ve got you covered.
                             </p>
                         </motion.div>
@@ -160,7 +160,7 @@ export default function LearnPage() {
                         <Section id="getting-started" title="Getting Started">
                             <h3>Creating Your Account</h3>
                             <ol className="list-decimal list-inside space-y-2 mb-6">
-                                <li>Visit the Wrapshot website and click <strong>Sign Up</strong></li>
+                                <li>Visit the Wrapshoot website and click <strong>Sign Up</strong></li>
                                 <li>Enter your email address and create a password</li>
                                 <li>Verify your email by clicking the link sent to your inbox</li>
                                 <li>Complete your profile with your name and optional phone number</li>
@@ -188,7 +188,7 @@ export default function LearnPage() {
 
                             <h3>Step 3: Setup Wizard</h3>
                             <p>
-                                When you create a new project, Wrapshot offers a guided <strong>Setup Wizard</strong> to help you
+                                When you create a new project, Wrapshoot offers a guided <strong>Setup Wizard</strong> to help you
                                 upload your script, add shooting days, cast members, and crew. You can skip any step and complete it later.
                             </p>
                         </Section>
@@ -200,7 +200,7 @@ export default function LearnPage() {
                                     How Script Analysis Works
                                 </h4>
                                 <p className="text-text-secondary text-sm">
-                                    Upload your script PDF and Wrapshot will automatically extract scenes, identify INT/EXT and
+                                    Upload your script PDF and Wrapshoot will automatically extract scenes, identify INT/EXT and
                                     DAY/NIGHT, detect production elements like props and wardrobe, generate synopses, and estimate shooting times. No manual data entry required.
                                 </p>
                             </div>
@@ -210,7 +210,7 @@ export default function LearnPage() {
                                 <li>Navigate to your project</li>
                                 <li>Go to the <strong>Script</strong> section in the sidebar</li>
                                 <li>Click <strong>Upload Script</strong> or drag-and-drop your PDF</li>
-                                <li>Wrapshot will automatically begin analysis</li>
+                                <li>Wrapshoot will automatically begin analysis</li>
                             </ol>
 
                             <h3>Reviewing Results</h3>
@@ -362,7 +362,7 @@ export default function LearnPage() {
                             </ol>
 
                             <h3>Element Categories</h3>
-                            <p>Wrapshot supports 25+ breakdown categories:</p>
+                            <p>Wrapshoot supports 25+ breakdown categories:</p>
                             <div className="grid grid-cols-2 gap-2 mb-6">
                                 {["Names & Character References", "Background/Extras", "Props", "Vehicles",
                                     "Wardrobe", "Makeup/Hair", "Camera", "Grip & Electric",
@@ -402,7 +402,7 @@ export default function LearnPage() {
 
                             <h3>Receipt Scanning</h3>
                             <p>
-                                Upload receipts and Wrapshot will attempt to extract the vendor name, amount, date,
+                                Upload receipts and Wrapshoot will attempt to extract the vendor name, amount, date,
                                 and suggested category automatically.
                             </p>
 
@@ -547,7 +547,7 @@ export default function LearnPage() {
                         <Section id="faq" title="Frequently Asked Questions">
                             <h3>Can I import data from other software?</h3>
                             <p>
-                                Currently, Wrapshot supports PDF script import with automatic analysis. CSV import for cast/crew is planned for a future update.
+                                Currently, Wrapshoot supports PDF script import with automatic analysis. CSV import for cast/crew is planned for a future update.
                             </p>
 
                             <h3>Is my data secure?</h3>
@@ -557,7 +557,7 @@ export default function LearnPage() {
 
                             <h3>Can I work offline?</h3>
                             <p>
-                                Wrapshot requires an internet connection. However, your data is saved continuously, so you won&apos;t lose work if you briefly disconnect.
+                                Wrapshoot requires an internet connection. However, your data is saved continuously, so you won&apos;t lose work if you briefly disconnect.
                             </p>
 
                             <h3>How do I export my data?</h3>
@@ -570,7 +570,7 @@ export default function LearnPage() {
 
                             <h3>Can multiple people edit at the same time?</h3>
                             <p>
-                                Yes! Wrapshot supports real-time collaboration. Changes sync instantly across all team members.
+                                Yes! Wrapshoot supports real-time collaboration. Changes sync instantly across all team members.
                             </p>
                         </Section>
 

@@ -11,7 +11,7 @@ export default function TermsPage() {
             <header className="fixed top-0 left-0 right-0 z-50 bg-bg/90 backdrop-blur-[20px] border-b border-border">
                 <div className="max-w-[1400px] mx-auto px-6 py-4 flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                        <Link href="/" className="font-serif text-xl font-medium">Wrapshot</Link>
+                        <Link href="/" className="font-serif text-xl font-medium">Wrapshoot</Link>
                         <span className="text-text-muted">/</span>
                         <span className="text-sm font-medium">Terms of Service</span>
                     </div>
@@ -34,7 +34,7 @@ export default function TermsPage() {
                             Terms of Service
                         </h1>
                         <p className="text-xl text-text-secondary leading-relaxed">
-                            The terms and conditions governing your use of Wrapshot.
+                            The terms and conditions governing your use of Wrapshoot.
                         </p>
                         <p className="text-sm text-text-muted mt-4">Last updated: February 17, 2026</p>
                     </motion.div>
@@ -42,13 +42,13 @@ export default function TermsPage() {
                     <div className="space-y-16">
                         <Section title="1. Acceptance of Terms">
                             <p>
-                                By accessing or using the Wrapshot platform, including the website at wrapshoot.com and
+                                By accessing or using the Wrapshoot platform, including the website at wrapshoot.com and
                                 the application at app.wrapshoot.com (collectively, the &quot;Service&quot;), you agree to be bound
                                 by these Terms of Service (&quot;Terms&quot;). If you do not agree to these Terms, you may not
                                 access or use the Service.
                             </p>
                             <p>
-                                These Terms constitute a legally binding agreement between you and Wrapshot (&quot;we,&quot; &quot;our,&quot;
+                                These Terms constitute a legally binding agreement between you and Wrapshoot (&quot;we,&quot; &quot;our,&quot;
                                 or &quot;us&quot;). We may update these Terms from time to time. Continued use of the Service after
                                 changes constitutes acceptance of the revised Terms.
                             </p>
@@ -56,7 +56,7 @@ export default function TermsPage() {
 
                         <Section title="2. Description of Service">
                             <p>
-                                Wrapshot is a film production management platform that provides tools for script analysis,
+                                Wrapshoot is a film production management platform that provides tools for script analysis,
                                 scene scheduling, cast and crew management, budgeting, location tracking, and team
                                 collaboration. The Service is designed for indie filmmakers, production teams, and film
                                 production professionals.
@@ -80,7 +80,7 @@ export default function TermsPage() {
 
                         <Section title="4. Subscription Plans and Payments">
                             <h3>Plans</h3>
-                            <p>Wrapshot offers the following subscription tiers:</p>
+                            <p>Wrapshoot offers the following subscription tiers:</p>
                             <ul className="list-disc list-inside space-y-2 mb-6">
                                 <li><strong>Free</strong> — Limited to 1 project and up to 3 team members</li>
                                 <li><strong>Pro</strong> — $49/month with unlimited projects and full feature access</li>
@@ -118,7 +118,7 @@ export default function TermsPage() {
                                 information, budgets, schedules, and any other materials you provide.
                             </p>
 
-                            <h3>License to Wrapshot</h3>
+                            <h3>License to Wrapshoot</h3>
                             <p>
                                 By uploading Your Content to the Service, you grant us a limited, non-exclusive,
                                 worldwide license to use, store, process, and display Your Content solely for the
@@ -168,12 +168,12 @@ export default function TermsPage() {
                         <Section title="8. Intellectual Property">
                             <p>
                                 The Service, including its design, features, code, documentation, and branding, is owned
-                                by Wrapshot and protected by intellectual property laws. Nothing in these Terms grants you
+                                by Wrapshoot and protected by intellectual property laws. Nothing in these Terms grants you
                                 any right, title, or interest in the Service beyond the limited right to use it in
                                 accordance with these Terms.
                             </p>
                             <p>
-                                The Wrapshot name, logo, and all related marks are trademarks of Wrapshot. You may not
+                                The Wrapshoot name, logo, and all related marks are trademarks of Wrapshoot. You may not
                                 use our trademarks without our prior written permission.
                             </p>
                         </Section>
@@ -207,7 +207,7 @@ export default function TermsPage() {
 
                         <Section title="11. Indemnification">
                             <p>
-                                You agree to indemnify, defend, and hold harmless Wrapshot and its officers, directors,
+                                You agree to indemnify, defend, and hold harmless Wrapshoot and its officers, directors,
                                 employees, and agents from any claims, damages, losses, liabilities, and expenses
                                 (including reasonable attorneys&apos; fees) arising from your use of the Service, your
                                 violation of these Terms, or your violation of any rights of a third party.
@@ -244,7 +244,7 @@ export default function TermsPage() {
                             <h3>Entire Agreement</h3>
                             <p>
                                 These Terms, together with the Privacy Policy, constitute the entire agreement between
-                                you and Wrapshot regarding your use of the Service.
+                                you and Wrapshoot regarding your use of the Service.
                             </p>
 
                             <h3>Severability</h3>

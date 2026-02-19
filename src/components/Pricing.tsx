@@ -53,7 +53,7 @@ const tiers = [
 
 export default function Pricing() {
     return (
-        <section id="pricing" className="py-section bg-bg-alt">
+        <section id="pricing" className="py-section">
             <div className="max-w-container mx-auto px-12">
                 <motion.div
                     className="mb-16"
@@ -68,12 +68,11 @@ export default function Pricing() {
                     </h2>
                 </motion.div>
 
-                <div className="grid grid-cols-3 gap-6 max-lg:grid-cols-1 max-lg:max-w-[400px]">
+                <div className="grid grid-cols-3 border-y border-border/80 max-lg:grid-cols-1">
                     {tiers.map((tier, i) => (
                         <motion.div
                             key={tier.name}
-                            className={`flex flex-col p-8 bg-white border rounded-xl ${tier.primary ? "border-text ring-1 ring-text" : "border-border"
-                                }`}
+                            className={`flex flex-col p-8 ${i > 0 ? "border-l border-border/80 max-lg:border-l-0 max-lg:border-t" : ""} ${tier.primary ? "bg-[#f9f9f8]" : ""}`}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -97,9 +96,9 @@ export default function Pricing() {
                             </ul>
                             <a
                                 href={tier.name === "Studio" ? "mailto:hello@wrapshoot.com" : "https://app.wrapshoot.com"}
-                                className={`block text-center px-3 py-3 text-sm font-medium border rounded-md transition-all duration-200 ${tier.primary
-                                        ? "bg-text text-white border-text hover:opacity-90"
-                                        : "border-border hover:border-text"
+                                className={`btn block text-center !px-3 !py-3 !text-sm ${tier.primary
+                                        ? "btn-primary"
+                                        : "btn-outline"
                                     }`}
                             >
                                 {tier.cta}
@@ -117,12 +116,12 @@ export default function Pricing() {
                 >
                     <h3 className="text-lg font-medium mb-8 text-center">Compare Plans</h3>
                     <div className="overflow-x-auto">
-                        <table className="w-full bg-white border border-border rounded-xl">
+                        <table className="w-full border-y border-border/80">
                             <thead>
                                 <tr className="border-b border-border">
                                     <th className="text-left text-sm font-medium p-4">Feature</th>
                                     <th className="text-center text-sm font-medium p-4">Free</th>
-                                    <th className="text-center text-sm font-medium p-4 bg-bg-alt">Pro</th>
+                                    <th className="text-center text-sm font-medium p-4 bg-zinc-100/50">Pro</th>
                                     <th className="text-center text-sm font-medium p-4">Studio</th>
                                 </tr>
                             </thead>
@@ -130,49 +129,49 @@ export default function Pricing() {
                                 <tr className="border-b border-border">
                                     <td className="p-4 text-text-secondary">Projects</td>
                                     <td className="p-4 text-center">1</td>
-                                    <td className="p-4 text-center bg-bg-alt">Unlimited</td>
+                                    <td className="p-4 text-center bg-zinc-100/50">Unlimited</td>
                                     <td className="p-4 text-center">Unlimited</td>
                                 </tr>
                                 <tr className="border-b border-border">
                                     <td className="p-4 text-text-secondary">Script Analysis</td>
                                     <td className="p-4 text-center">Limited</td>
-                                    <td className="p-4 text-center bg-bg-alt">Full</td>
+                                    <td className="p-4 text-center bg-zinc-100/50">Full</td>
                                     <td className="p-4 text-center">Full</td>
                                 </tr>
                                 <tr className="border-b border-border">
                                     <td className="p-4 text-text-secondary">Team Members</td>
                                     <td className="p-4 text-center">3</td>
-                                    <td className="p-4 text-center bg-bg-alt">Unlimited</td>
+                                    <td className="p-4 text-center bg-zinc-100/50">Unlimited</td>
                                     <td className="p-4 text-center">Unlimited</td>
                                 </tr>
                                 <tr className="border-b border-border">
                                     <td className="p-4 text-text-secondary">Scene Breakdown</td>
                                     <td className="p-4 text-center">Basic</td>
-                                    <td className="p-4 text-center bg-bg-alt">Full</td>
+                                    <td className="p-4 text-center bg-zinc-100/50">Full</td>
                                     <td className="p-4 text-center">Full</td>
                                 </tr>
                                 <tr className="border-b border-border">
                                     <td className="p-4 text-text-secondary">Budget Tracking</td>
                                     <td className="p-4 text-center text-text-muted">—</td>
-                                    <td className="p-4 text-center bg-bg-alt"><Check size={16} className="inline" /></td>
+                                    <td className="p-4 text-center bg-zinc-100/50"><Check size={16} className="inline" /></td>
                                     <td className="p-4 text-center"><Check size={16} className="inline" /></td>
                                 </tr>
                                 <tr className="border-b border-border">
                                     <td className="p-4 text-text-secondary">Call Sheets</td>
                                     <td className="p-4 text-center text-text-muted">—</td>
-                                    <td className="p-4 text-center bg-bg-alt"><Check size={16} className="inline" /></td>
+                                    <td className="p-4 text-center bg-zinc-100/50"><Check size={16} className="inline" /></td>
                                     <td className="p-4 text-center"><Check size={16} className="inline" /></td>
                                 </tr>
                                 <tr className="border-b border-border">
                                     <td className="p-4 text-text-secondary">Analytics</td>
                                     <td className="p-4 text-center text-text-muted">—</td>
-                                    <td className="p-4 text-center bg-bg-alt">Basic</td>
+                                    <td className="p-4 text-center bg-zinc-100/50">Basic</td>
                                     <td className="p-4 text-center">Advanced</td>
                                 </tr>
                                 <tr>
                                     <td className="p-4 text-text-secondary">Support</td>
                                     <td className="p-4 text-center">Community</td>
-                                    <td className="p-4 text-center bg-bg-alt">Priority</td>
+                                    <td className="p-4 text-center bg-zinc-100/50">Priority</td>
                                     <td className="p-4 text-center">Dedicated</td>
                                 </tr>
                             </tbody>

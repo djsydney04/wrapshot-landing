@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 export default function FinalCTA() {
     return (
-        <section className="py-section border-t border-border">
+        <section className="py-section border-t border-border/70">
             <div className="max-w-container mx-auto px-12">
                 <motion.div
-                    className="text-center max-w-[560px] mx-auto"
+                    className="text-center max-w-[680px] mx-auto"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}

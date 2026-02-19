@@ -41,30 +41,30 @@ export default function WhoItsFor() {
         <section className="py-section">
             <div className="max-w-container mx-auto px-12">
                 <motion.div
-                    className="text-center mb-16"
+                    className="mb-16"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
                     <p className="text-xs uppercase tracking-[0.1em] text-text-muted mb-4">Who it&apos;s for</p>
-                    <h2 className="font-serif text-[40px] font-normal max-w-2xl mx-auto max-md:text-[32px]">
+                    <h2 className="font-serif text-[40px] font-normal max-w-2xl max-md:text-[32px]">
                         Made for the people who<br />
                         <em className="italic">make movies happen.</em>
                     </h2>
                 </motion.div>
 
-                <div className="grid grid-cols-3 gap-6 max-lg:grid-cols-2 max-md:grid-cols-1">
+                <div className="grid grid-cols-2 gap-x-14 border-t border-border max-md:grid-cols-1">
                     {audiences.map((audience, index) => (
                         <motion.div
                             key={index}
-                            className="p-8 border border-border rounded-xl bg-white"
+                            className="py-7 border-b border-border/80"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                         >
-                            <div className="mb-4 text-text">{audience.icon}</div>
+                            <div className="mb-4 text-text h-10 w-10 rounded-full bg-[#f1f2f4] flex items-center justify-center">{audience.icon}</div>
                             <h3 className="text-lg font-medium mb-2">{audience.title}</h3>
                             <p className="text-sm text-text-secondary leading-relaxed">{audience.description}</p>
                         </motion.div>

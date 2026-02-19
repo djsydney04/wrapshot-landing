@@ -14,7 +14,7 @@ const faqs = [
     },
     {
         q: "Can I import data from other software?",
-        a: "Currently, Wrapshot supports PDF script import with automatic analysis. We extract scenes, elements, and more automatically. CSV import for cast/crew is planned for a future update.",
+        a: "Currently, Wrapshoot supports PDF script import with automatic analysis. We extract scenes, elements, and more automatically. CSV import for cast/crew is planned for a future update.",
     },
     {
         q: "Is my data secure?",
@@ -22,19 +22,19 @@ const faqs = [
     },
     {
         q: "Can multiple people edit at the same time?",
-        a: "Yes! Wrapshot supports real-time collaboration. Changes sync instantly across all team members, so everyone is always on the same page.",
+        a: "Yes! Wrapshoot supports real-time collaboration. Changes sync instantly across all team members, so everyone is always on the same page.",
     },
     {
         q: "How does script analysis work?",
-        a: "Upload your script PDF and Wrapshot automatically extracts scenes, detects INT/EXT and DAY/NIGHT, identifies production elements like props and wardrobe, generates synopses, and estimates shooting times. Review and accept suggestions with a click.",
+        a: "Upload your script PDF and Wrapshoot automatically extracts scenes, detects INT/EXT and DAY/NIGHT, identifies production elements like props and wardrobe, generates synopses, and estimates shooting times. Review and accept suggestions with a click.",
     },
     {
         q: "What can I export?",
         a: "You can export call sheets as PDF, budget reports, and more export options are coming soon. Everything is designed to integrate smoothly with your existing workflow.",
     },
     {
-        q: "Do I need technical knowledge to use Wrapshot?",
-        a: "Not at all. Wrapshot is designed for filmmakers, not tech experts. The interface is intuitive and mirrors traditional film production workflows you already know.",
+        q: "Do I need technical knowledge to use Wrapshoot?",
+        a: "Not at all. Wrapshoot is designed for filmmakers, not tech experts. The interface is intuitive and mirrors traditional film production workflows you already know.",
     },
 ];
 
@@ -42,7 +42,7 @@ export default function FAQ() {
     const [open, setOpen] = useState<number | null>(null);
 
     return (
-        <section id="faq" className="py-section border-t border-border">
+        <section id="faq" className="py-section border-t border-border/70">
             <div className="max-w-container mx-auto px-12">
                 <div className="grid grid-cols-[1fr_1.5fr] gap-20 max-lg:grid-cols-1 max-lg:gap-12">
                     <motion.div

@@ -7,7 +7,7 @@ const phases = [
         phase: "Import",
         title: "Script Upload & Analysis",
         description:
-            "Drop in your PDF. Wrapshot extracts every scene, location, character, and production element automatically — with confidence ratings so you stay in control.",
+            "Drop in your PDF. Wrapshoot extracts every scene, location, character, and production element automatically — with confidence ratings so you stay in control.",
     },
     {
         phase: "Breakdown",
@@ -87,11 +87,11 @@ export default function HowItWorks() {
                             >
                                 {/* Dot */}
                                 <div className="relative z-10 flex-shrink-0 w-[47px] flex justify-center max-md:w-[31px]">
-                                    <div className="w-[11px] h-[11px] rounded-full bg-text mt-[7px]" />
+                                    <div className="w-[11px] h-[11px] rounded-full bg-text/85 mt-[7px] shadow-[0_0_0_4px_rgba(17,24,39,0.08)]" />
                                 </div>
 
                                 {/* Content */}
-                                <div className="pb-2 flex-1 min-w-0">
+                                <div className="pb-2 flex-1 min-w-0 pr-2">
                                     <p className="text-[11px] uppercase tracking-[0.12em] text-text-muted mb-1">
                                         {step.phase}
                                     </p>
@@ -108,7 +108,7 @@ export default function HowItWorks() {
                         {/* Terminal dot */}
                         <div className="relative flex items-start gap-8 max-md:gap-5">
                             <div className="relative z-10 flex-shrink-0 w-[47px] flex justify-center max-md:w-[31px]">
-                                <div className="w-[11px] h-[11px] rounded-full border-2 border-text bg-bg mt-[7px]" />
+                                <div className="w-[11px] h-[11px] rounded-full border-2 border-text/65 bg-bg mt-[7px]" />
                             </div>
                             <p className="text-sm font-medium text-text-muted italic mt-[5px]">
                                 That&apos;s a wrap.

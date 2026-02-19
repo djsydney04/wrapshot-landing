@@ -55,16 +55,19 @@ export default function Features() {
                     </h2>
                 </motion.div>
 
-                <div className="grid grid-cols-3 gap-6 max-md:grid-cols-1">
+                <div className="grid grid-cols-2 gap-x-14 border-t border-border max-md:grid-cols-1">
                     {features.map((f, i) => (
                         <motion.div
                             key={f.title}
-                            className="p-8 rounded-xl border border-border bg-white"
+                            className="py-7 border-b border-border/80"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.05, duration: 0.5 }}
                         >
+                            <p className="text-[11px] uppercase tracking-[0.1em] text-text-muted mb-2">
+                                {(i + 1).toString().padStart(2, "0")}
+                            </p>
                             <h3 className="text-lg font-medium mb-3 text-text">
                                 {f.title}
                             </h3>

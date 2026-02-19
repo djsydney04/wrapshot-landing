@@ -11,7 +11,7 @@ export default function PrivacyPage() {
             <header className="fixed top-0 left-0 right-0 z-50 bg-bg/90 backdrop-blur-[20px] border-b border-border">
                 <div className="max-w-[1400px] mx-auto px-6 py-4 flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                        <Link href="/" className="font-serif text-xl font-medium">Wrapshot</Link>
+                        <Link href="/" className="font-serif text-xl font-medium">Wrapshoot</Link>
                         <span className="text-text-muted">/</span>
                         <span className="text-sm font-medium">Privacy Policy</span>
                     </div>
@@ -42,7 +42,7 @@ export default function PrivacyPage() {
                     <div className="space-y-16">
                         <Section title="1. Introduction">
                             <p>
-                                Wrapshot (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates the Wrapshot platform, including the website
+                                Wrapshoot (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates the Wrapshoot platform, including the website
                                 at wrapshoot.com and the application at app.wrapshoot.com (collectively, the &quot;Service&quot;).
                                 This Privacy Policy explains how we collect, use, disclose, and safeguard your information
                                 when you use our Service.
@@ -129,7 +129,7 @@ export default function PrivacyPage() {
 
                             <h3>Business Transfers</h3>
                             <p>
-                                If Wrapshot is involved in a merger, acquisition, or sale of assets, your information
+                                If Wrapshoot is involved in a merger, acquisition, or sale of assets, your information
                                 may be transferred as part of that transaction. We will notify you before your information
                                 becomes subject to a different privacy policy.
                             </p>

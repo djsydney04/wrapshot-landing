@@ -18,9 +18,9 @@ const newsreader = Newsreader({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://wrapshoot.com"),
-  title: "Wrapshot — The All-in-One Film Production Platform",
-  description: "From script to screen, beautifully organized. Wrapshot combines traditional film production tools with modern workflow automation to help indie filmmakers and production teams plan, schedule, and execute their projects efficiently.",
-  keywords: ["film scheduling", "production scheduling", "call sheets", "stripboard", "movie production software", "wrapshot", "film production", "filmmakers", "script analysis", "scene breakdown"],
+  title: "Wrapshoot — The All-in-One Film Production Platform",
+  description: "From script to screen, beautifully organized. Wrapshoot combines traditional film production tools with modern workflow automation to help indie filmmakers and production teams plan, schedule, and execute their projects efficiently.",
+  keywords: ["film scheduling", "production scheduling", "call sheets", "stripboard", "movie production software", "wrapshoot", "film production", "filmmakers", "script analysis", "scene breakdown"],
   icons: {
     icon: "https://hhmdkkkpaukfcwfmdxyl.supabase.co/storage/v1/object/public/logo/logo.svg",
     shortcut: "https://hhmdkkkpaukfcwfmdxyl.supabase.co/storage/v1/object/public/logo/logo.svg",
@@ -28,27 +28,27 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
   openGraph: {
-    title: "Wrapshot — The All-in-One Film Production Platform",
+    title: "Wrapshoot — The All-in-One Film Production Platform",
     description: "From script to screen, beautifully organized.",
     url: "https://wrapshoot.com",
     type: "website",
-    siteName: "Wrapshot",
+    siteName: "Wrapshoot",
     images: [
       {
         url: "https://hhmdkkkpaukfcwfmdxyl.supabase.co/storage/v1/object/public/logo/Blue%20Playful%20Closed%20Due%20To%20Weather%20Facebook%20Post%20(2).png",
         width: 1200,
         height: 630,
-        alt: "Wrapshot — The All-in-One Film Production Platform",
+        alt: "Wrapshoot — The All-in-One Film Production Platform",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wrapshot",
+    title: "Wrapshoot",
     description: "From script to screen, beautifully organized.",
     images: ["https://hhmdkkkpaukfcwfmdxyl.supabase.co/storage/v1/object/public/logo/Blue%20Playful%20Closed%20Due%20To%20Weather%20Facebook%20Post%20(2).png"],
   },
-  applicationName: "Wrapshot",
+  applicationName: "Wrapshoot",
 };
 
 export default function RootLayout({

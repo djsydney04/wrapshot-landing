@@ -1,56 +1,71 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Hero() {
-    return (
-        <section className="pt-[140px] pb-16 overflow-hidden relative bg-[#FAFAFA]">
-            {/* Gradient background */}
-            <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white via-[#FAFAFA] to-[#FAFAFA] opacity-80 pointer-events-none"></div>
+    const sectionRef = useRef<HTMLElement>(null);
+    const { scrollYProgress } = useScroll({
+        target: sectionRef,
+        offset: ["start start", "end start"],
+    });
+    const copyY = useTransform(scrollYProgress, [0, 1], [0, -34]);
+    const videoY = useTransform(scrollYProgress, [0, 1], [0, 120]);
+    const videoScale = useTransform(scrollYProgress, [0, 1], [1, 0.94]);
 
-            <div className="max-w-container mx-auto px-12 relative z-10">
+    return (
+        <section ref={sectionRef} className="hero-stage pt-[220px] pb-32 relative overflow-hidden max-md:pt-[160px] max-md:pb-20">
+            <div className="max-w-container mx-auto px-12 max-md:px-6">
                 <motion.div
-                    className="max-w-[720px] mx-auto text-center mb-16"
+                    className="text-center max-w-[820px] mx-auto mb-24 max-md:mb-16"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
                 >
-                    <h1 className="font-serif text-[64px] font-normal leading-[1.1] tracking-[-0.02em] mb-6 text-text max-md:text-[44px]">
-                        From script to screen,
-                        <br />
-                        <em className="italic">beautifully organized.</em>
-                    </h1>
-                    <p className="text-[20px] leading-[1.6] text-text-secondary mb-10 max-w-[560px] mx-auto max-md:text-[18px]">
-                        The all-in-one film production platform. Scheduling, breakdowns, call sheets, budgets, and team collaboration—all in one place to plan, schedule, and execute your projects efficiently.
-                    </p>
-                    <motion.div
-                        className="flex items-center justify-center gap-4 max-md:flex-col"
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2, duration: 0.5 }}
-                    >
-                        <a href="https://app.wrapshoot.com" className="btn btn-primary shadow-lg shadow-black/5 hover:shadow-xl hover:shadow-black/10 transition-all">
-                            Start Your Production Free
-                        </a>
-                        <a href="#how-it-works" className="btn btn-outline">
-                            See How It Works
-                        </a>
+                    <motion.div style={{ y: copyY }}>
+                        <p className="hero-kicker mb-8 justify-center">
+                            Built for working film crews
+                        </p>
+                        <h1 className="font-serif text-[72px] font-normal leading-[1.05] tracking-[-0.03em] mb-7 text-text max-lg:text-[56px] max-md:text-[40px]">
+                            From script to screen,
+                            <br />
+                            <em className="italic">keep the whole set in sync.</em>
+                        </h1>
+                        <p className="text-[19px] leading-[1.7] text-text-secondary mx-auto max-w-[540px] mb-14 max-md:text-[17px] max-md:mb-10">
+                            The all-in-one production workspace to plan shoot days,
+                            coordinate departments, and publish call sheets.
+                        </p>
+                        <motion.div
+                            className="flex items-center justify-center gap-4 max-md:flex-col"
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.2, duration: 0.5 }}
+                        >
+                            <a href="https://app.wrapshoot.com" className="btn btn-primary">
+                                Start Your Production Free
+                            </a>
+                            <a href="#how-it-works" className="btn btn-outline">
+                                See How It Works
+                            </a>
+                        </motion.div>
                     </motion.div>
                 </motion.div>
 
                 <motion.div
-                    className="relative max-w-5xl mx-auto rounded-xl overflow-hidden shadow-2xl border border-border/60 bg-white"
+                    className="hero-video-shell max-w-[1080px] mx-auto"
+                    style={{ y: videoY, scale: videoScale }}
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                 >
-                    <div className="aspect-[16/9] bg-zinc-900 relative group overflow-hidden">
+                    <div className="hero-video-frame aspect-[16/9]">
                         <iframe
                             src="https://player.mux.com/5qO2F2AZ7Y7OvUXgdgp02AmhFmGnP6TeLR39twNdCwh8?autoplay=muted&loop=true&controls=false"
-                            style={{ width: '100%', height: '100%', border: 'none' }}
+                            style={{ width: "100%", height: "100%", border: "none" }}
                             allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
                             allowFullScreen
                         />
+                        <div className="hero-video-glow" />
                     </div>
                 </motion.div>
             </div>

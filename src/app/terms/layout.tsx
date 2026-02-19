@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Terms of Service — Wrapshot",
-    description: "The terms and conditions governing your use of the Wrapshot platform.",
+    title: "Terms of Service — Wrapshoot",
+    description: "The terms and conditions governing your use of the Wrapshoot platform.",
     openGraph: {
-        title: "Terms of Service — Wrapshot",
-        description: "The terms and conditions governing your use of the Wrapshot platform.",
+        title: "Terms of Service — Wrapshoot",
+        description: "The terms and conditions governing your use of the Wrapshoot platform.",
     },
 };
 
