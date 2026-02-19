@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 import { useAuth } from "@/lib/auth-context";
 
 interface CommentFormProps {
@@ -36,7 +36,7 @@ export default function CommentForm({ postId, parentId, onCreated, onCancel, pla
     };
     if (parentId) payload.parent_id = parentId;
 
-    const { error: insertError } = await supabase.from("comments").insert(payload);
+    const { error: insertError } = await getSupabase().from("comments").insert(payload);
 
     setSubmitting(false);
 

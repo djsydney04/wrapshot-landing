@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 import { useAuth } from "@/lib/auth-context";
 import PostCard from "./PostCard";
 
@@ -24,7 +24,7 @@ export default function PostList({ categoryId }: PostListProps) {
   const fetchPosts = useCallback(
     async (pageNum: number, append = false) => {
       setLoading(true);
-      let query = supabase
+      let query = getSupabase()
         .from("posts")
         .select("*, profiles(username, display_name), categories(name, slug)");
 
@@ -50,7 +50,7 @@ export default function PostList({ categoryId }: PostListProps) {
   const fetchUserVotes = useCallback(
     async (postIds: string[]) => {
       if (!user || postIds.length === 0) return;
-      const { data } = await supabase
+      const { data } = await getSupabase()
         .from("votes")
         .select("post_id")
         .eq("user_id", user.id)

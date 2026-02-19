@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { Plus } from "lucide-react";
 import * as Icons from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 import { useAuth } from "@/lib/auth-context";
 import CommunityHeader from "@/components/community/CommunityHeader";
 import PostList from "@/components/community/PostList";
@@ -30,7 +30,7 @@ export default function CategoryPage() {
   const [refreshKey, setRefreshKey] = useState(0);
 
   useEffect(() => {
-    supabase
+    getSupabase()
       .from("categories")
       .select("*")
       .eq("slug", slug)
@@ -59,7 +59,7 @@ export default function CategoryPage() {
     );
   }
 
-  const IconComponent = (category.icon && (Icons as unknown as Record<string, LucideIcon>)[category.icon]) || Icons.MessageSquare;
+  const IconComponent = (category.icon && (Icons as Record<string, unknown>)[category.icon] as LucideIcon) || Icons.MessageSquare;
 
   return (
     <div className="min-h-screen bg-[var(--studio-bg)]">

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 import { useAuth } from "@/lib/auth-context";
 import CommentItem from "./CommentItem";
 import CommentForm from "./CommentForm";
@@ -24,7 +24,7 @@ export default function CommentList({ postId }: { postId: string }) {
 
   const fetchComments = useCallback(async () => {
     setLoading(true);
-    const { data } = await supabase
+    const { data } = await getSupabase()
       .from("comments")
       .select("*, profiles(username, display_name)")
       .eq("post_id", postId)
@@ -53,7 +53,7 @@ export default function CommentList({ postId }: { postId: string }) {
       // Fetch user votes
       if (user) {
         const commentIds = data.map((c: { id: string }) => c.id);
-        const { data: votes } = await supabase
+        const { data: votes } = await getSupabase()
           .from("votes")
           .select("comment_id")
           .eq("user_id", user.id)

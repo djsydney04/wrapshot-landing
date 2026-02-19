@@ -15,7 +15,7 @@ interface Category {
 }
 
 export default function CategoryCard({ category, index }: { category: Category; index: number }) {
-  const IconComponent = (category.icon && (Icons as unknown as Record<string, LucideIcon>)[category.icon]) || Icons.MessageSquare;
+  const IconComponent = (category.icon && (Icons as Record<string, unknown>)[category.icon] as LucideIcon) || Icons.MessageSquare;
 
   return (
     <motion.div

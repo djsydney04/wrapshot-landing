@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ArrowUp } from "lucide-react";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 import { useAuth } from "@/lib/auth-context";
 
 interface VoteButtonProps {
@@ -32,7 +32,7 @@ export default function VoteButton({ targetType, targetId, initialCount, initial
       setCount((c) => c - 1);
 
       const col = targetType === "post" ? "post_id" : "comment_id";
-      const { error } = await supabase
+      const { error } = await getSupabase()
         .from("votes")
         .delete()
         .eq("user_id", user.id)
@@ -50,7 +50,7 @@ export default function VoteButton({ targetType, targetId, initialCount, initial
       if (targetType === "post") payload.post_id = targetId;
       else payload.comment_id = targetId;
 
-      const { error } = await supabase.from("votes").insert(payload);
+      const { error } = await getSupabase().from("votes").insert(payload);
 
       if (error) {
         setVoted(false);

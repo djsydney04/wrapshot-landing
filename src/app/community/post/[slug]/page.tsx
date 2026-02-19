@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 import { useAuth } from "@/lib/auth-context";
 import CommunityHeader from "@/components/community/CommunityHeader";
 import PostDetail from "@/components/community/PostDetail";
@@ -18,7 +18,7 @@ export default function PostPage() {
 
   useEffect(() => {
     async function fetchPost() {
-      const { data } = await supabase
+      const { data } = await getSupabase()
         .from("posts")
         .select("*, profiles(username, display_name), categories(name, slug)")
         .eq("slug", slug)
@@ -28,7 +28,7 @@ export default function PostPage() {
         setPost(data);
 
         if (user) {
-          const { data: vote } = await supabase
+          const { data: vote } = await getSupabase()
             .from("votes")
             .select("id")
             .eq("user_id", user.id)

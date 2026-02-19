@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 import { useAuth } from "@/lib/auth-context";
 import { generateSlug } from "@/lib/generate-slug";
 
@@ -30,7 +30,7 @@ export default function PostForm({ open, onClose, defaultCategoryId, onCreated }
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
-    supabase
+    getSupabase()
       .from("categories")
       .select("id, name, slug")
       .order("sort_order")
@@ -55,7 +55,7 @@ export default function PostForm({ open, onClose, defaultCategoryId, onCreated }
 
     const slug = generateSlug(title);
 
-    const { error: insertError } = await supabase.from("posts").insert({
+    const { error: insertError } = await getSupabase().from("posts").insert({
       author_id: user.id,
       category_id: categoryId,
       title,

@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import { Plus } from "lucide-react";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 import { useAuth } from "@/lib/auth-context";
 import CommunityHeader from "@/components/community/CommunityHeader";
 import CategoryCard from "@/components/community/CategoryCard";
@@ -26,7 +26,7 @@ export default function CommunityPage() {
   const [refreshKey, setRefreshKey] = useState(0);
 
   useEffect(() => {
-    supabase
+    getSupabase()
       .from("categories")
       .select("*")
       .order("sort_order")
