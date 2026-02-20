@@ -11,7 +11,7 @@ const features = [
     {
         title: "Confidence-Scored Suggestions",
         description:
-            "Auto-detected elements include confidence ratings. Review what the parser found, accept or dismiss per scene.",
+            "Each auto-detected element shows a confidence rating so you know what needs a second look. Accept or dismiss per scene.",
     },
     {
         title: "Real-Time Sync",
