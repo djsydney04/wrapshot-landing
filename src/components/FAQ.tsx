@@ -34,7 +34,7 @@ const faqs = [
     },
     {
         q: "Do I need technical knowledge?",
-        a: "No. The interface mirrors traditional production workflows — stripeboards, breakdowns, call sheets. If you've worked on a set, you already know how to use it.",
+        a: "No. The interface mirrors traditional production workflows — stripboards, breakdowns, call sheets. If you've worked on a set, you already know how to use it.",
     },
 ];
 

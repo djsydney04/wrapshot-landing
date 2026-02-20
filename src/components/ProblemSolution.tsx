@@ -21,7 +21,7 @@ export default function ProblemSolution() {
                     </div>
                     <div className="col-span-8 max-lg:col-span-12">
                         <p className="text-xl leading-relaxed text-text-secondary max-md:text-[18px]">
-                            Stripeboard, breakdowns, call sheets, budgets, and crew coordination
+                            Stripboard, breakdowns, call sheets, budgets, and crew coordination
                             in a single workspace. Changes propagate across every department automatically,
                             so your schedule, budget, and call sheets always reflect the same data.
                         </p>

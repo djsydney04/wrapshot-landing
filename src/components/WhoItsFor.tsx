@@ -8,7 +8,7 @@ const audiences = [
         icon: <Briefcase size={24} />,
         title: "1st ADs & Coordinators",
         description:
-            "Stripeboard, call sheets, and day planning in one view. Stop rebuilding spreadsheets every time the schedule changes.",
+            "Stripboard, call sheets, and day planning in one view. Stop rebuilding spreadsheets every time the schedule changes.",
     },
     {
         icon: <LineChart size={24} />,
