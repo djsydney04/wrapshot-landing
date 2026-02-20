@@ -16,7 +16,7 @@ interface AuthContextType {
   session: Session | null;
   profile: Profile | null;
   loading: boolean;
-  redirectToLogin: (returnPath?: string) => void;
+  redirectToLogin: (returnPath?: string, mode?: "signin" | "signup") => void;
   signOut: () => Promise<void>;
 }
 
@@ -60,10 +60,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return () => subscription.unsubscribe();
   }, [fetchProfile]);
 
-  const redirectToLogin = (returnPath?: string) => {
+  const redirectToLogin = (returnPath?: string, mode?: "signin" | "signup") => {
     const currentPath = returnPath || window.location.pathname;
     const callbackUrl = `${window.location.origin}/community/auth/callback?next=${encodeURIComponent(currentPath)}`;
-    window.location.href = `${AUTH_APP_URL}/auth/community?return_to=${encodeURIComponent(callbackUrl)}`;
+    const modeParam = mode ? `&mode=${mode}` : "";
+    window.location.href = `${AUTH_APP_URL}/auth/community?return_to=${encodeURIComponent(callbackUrl)}${modeParam}`;
   };
 
   const signOut = async () => {
