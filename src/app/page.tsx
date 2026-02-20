@@ -4,6 +4,7 @@ import ProblemSolution from "@/components/ProblemSolution";
 import HowItWorks from "@/components/HowItWorks";
 import Features from "@/components/Features";
 import WhoItsFor from "@/components/WhoItsFor";
+import SocialProof from "@/components/SocialProof";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
@@ -19,6 +20,7 @@ export default function Home() {
         <HowItWorks />
         <Features />
         <WhoItsFor />
+        <SocialProof />
         <Pricing />
         <FAQ />
         <FinalCTA />
