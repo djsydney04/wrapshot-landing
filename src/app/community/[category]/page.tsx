@@ -24,7 +24,7 @@ interface Category {
 export default function CategoryPage() {
   const params = useParams();
   const slug = params.category as string;
-  const { user, setShowAuthModal } = useAuth();
+  const { user, redirectToLogin } = useAuth();
   const [category, setCategory] = useState<Category | null>(null);
   const [showPostForm, setShowPostForm] = useState(false);
   const [refreshKey, setRefreshKey] = useState(0);
@@ -42,7 +42,7 @@ export default function CategoryPage() {
 
   const handleNewPost = () => {
     if (!user) {
-      setShowAuthModal(true);
+      redirectToLogin();
       return;
     }
     setShowPostForm(true);

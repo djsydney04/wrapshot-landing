@@ -20,7 +20,7 @@ interface Category {
 }
 
 export default function CommunityPage() {
-  const { user, setShowAuthModal } = useAuth();
+  const { user, redirectToLogin } = useAuth();
   const [categories, setCategories] = useState<Category[]>([]);
   const [showPostForm, setShowPostForm] = useState(false);
   const [refreshKey, setRefreshKey] = useState(0);
@@ -37,7 +37,7 @@ export default function CommunityPage() {
 
   const handleNewPost = () => {
     if (!user) {
-      setShowAuthModal(true);
+      redirectToLogin();
       return;
     }
     setShowPostForm(true);

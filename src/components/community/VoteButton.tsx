@@ -13,14 +13,14 @@ interface VoteButtonProps {
 }
 
 export default function VoteButton({ targetType, targetId, initialCount, initialVoted }: VoteButtonProps) {
-  const { user, setShowAuthModal } = useAuth();
+  const { user, redirectToLogin } = useAuth();
   const [count, setCount] = useState(initialCount);
   const [voted, setVoted] = useState(initialVoted);
   const [busy, setBusy] = useState(false);
 
   const handleVote = async () => {
     if (!user) {
-      setShowAuthModal(true);
+      redirectToLogin();
       return;
     }
     if (busy) return;
