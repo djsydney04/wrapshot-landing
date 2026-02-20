@@ -6,6 +6,10 @@ import Link from "next/link";
 import { ArrowLeft, Send, CheckCircle } from "lucide-react";
 import posthog from "posthog-js";
 
+const SURVEY_ID = "019c7c96-a3e5-0000-db20-207822659273";
+
+const roles = ["Engineering", "GTM", "Design", "Content & community", "Something else"] as const;
+
 export default function JobsPage() {
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -14,7 +18,7 @@ export default function JobsPage() {
         email: "",
         role: "",
         portfolio: "",
-        why: "",
+        numberOne: "",
     });
 
     const handleChange = (
@@ -27,15 +31,13 @@ export default function JobsPage() {
         e.preventDefault();
         setLoading(true);
 
-        const surveyId = "019c7c96-a3e5-0000-db20-207822659273";
-
         posthog.capture("survey sent", {
-            $survey_id: surveyId,
+            $survey_id: SURVEY_ID,
             $survey_response: form.name,
             $survey_response_1: form.email,
             $survey_response_2: form.role,
             $survey_response_3: form.portfolio,
-            $survey_response_4: form.why,
+            $survey_response_4: form.numberOne,
         });
 
         setLoading(false);
@@ -69,10 +71,9 @@ export default function JobsPage() {
                         We hire exceptional people.
                     </h1>
                     <p className="text-lg text-text-secondary leading-relaxed mb-4">
-                        We&apos;re a small team building tools for the next generation of
-                        content creators. We don&apos;t have open roles listed — we
-                        have open seats for people who are undeniably great at what
-                        they do.
+                        We&apos;re building the next generation of software for
+                        filmmakers. We don&apos;t have open roles listed — we have
+                        open seats for people who are undeniably great at what they do.
                     </p>
                     <p className="text-text-secondary leading-relaxed">
                         If that sounds like you, introduce yourself below. We review
@@ -109,13 +110,13 @@ export default function JobsPage() {
                         transition={{ duration: 0.5, delay: 0.15 }}
                         className="space-y-6"
                     >
-                        {/* Name */}
+                        {/* Q1: Name */}
                         <div>
                             <label
                                 htmlFor="name"
                                 className="block text-sm font-medium mb-2"
                             >
-                                Name
+                                What&apos;s your name?
                             </label>
                             <input
                                 id="name"
@@ -129,13 +130,13 @@ export default function JobsPage() {
                             />
                         </div>
 
-                        {/* Email */}
+                        {/* Q2: Email */}
                         <div>
                             <label
                                 htmlFor="email"
                                 className="block text-sm font-medium mb-2"
                             >
-                                Email
+                                What&apos;s your email?
                             </label>
                             <input
                                 id="email"
@@ -149,7 +150,7 @@ export default function JobsPage() {
                             />
                         </div>
 
-                        {/* Role */}
+                        {/* Q3: What do you do best? */}
                         <div>
                             <label
                                 htmlFor="role"
@@ -168,16 +169,15 @@ export default function JobsPage() {
                                 <option value="" disabled>
                                     Select a discipline
                                 </option>
-                                <option value="engineering">Engineering</option>
-                                <option value="design">Design</option>
-                                <option value="product">Product</option>
-                                <option value="marketing">Marketing &amp; Growth</option>
-                                <option value="content">Content &amp; Community</option>
-                                <option value="other">Something else entirely</option>
+                                {roles.map((role) => (
+                                    <option key={role} value={role}>
+                                        {role}
+                                    </option>
+                                ))}
                             </select>
                         </div>
 
-                        {/* Portfolio / Link */}
+                        {/* Q4: Link to your work */}
                         <div>
                             <label
                                 htmlFor="portfolio"
@@ -199,22 +199,22 @@ export default function JobsPage() {
                             />
                         </div>
 
-                        {/* Why */}
+                        {/* Q5: What are you #1 in the world at? */}
                         <div>
                             <label
-                                htmlFor="why"
+                                htmlFor="numberOne"
                                 className="block text-sm font-medium mb-2"
                             >
-                                Why Wrapshoot?
+                                What are you #1 in the world at?
                             </label>
                             <textarea
-                                id="why"
-                                name="why"
+                                id="numberOne"
+                                name="numberOne"
                                 required
-                                rows={5}
-                                value={form.why}
+                                rows={4}
+                                value={form.numberOne}
                                 onChange={handleChange}
-                                placeholder="Tell us what excites you about what we're building and what you'd bring to the team."
+                                placeholder="Tell us the thing you're better at than almost anyone."
                                 className="w-full px-4 py-3 rounded-lg border border-border bg-white text-sm outline-none focus:border-text/30 transition-colors resize-none"
                             />
                         </div>
@@ -229,7 +229,7 @@ export default function JobsPage() {
                                 "Sending..."
                             ) : (
                                 <>
-                                    Submit Application
+                                    Submit
                                     <Send size={15} />
                                 </>
                             )}
