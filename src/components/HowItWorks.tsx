@@ -5,45 +5,45 @@ import { motion } from "framer-motion";
 const phases = [
     {
         phase: "Import",
-        title: "Script Upload & Analysis",
+        title: "Script Analysis",
         description:
-            "Drop in your PDF. Wrapshoot extracts every scene, location, character, and production element automatically — with confidence ratings so you stay in control.",
+            "Upload your PDF. Wrapshoot parses scenes, locations, characters, and elements automatically. Review suggestions with confidence scores before accepting.",
     },
     {
         phase: "Breakdown",
-        title: "Scene-by-Scene Breakdown",
+        title: "Element Breakdown",
         description:
-            "25+ element categories — props, wardrobe, vehicles, VFX, SFX, and more — auto-suggested for each scene. Accept, dismiss, or add your own in a click.",
+            "Props, wardrobe, vehicles, VFX, SFX, and 20+ other categories flagged per scene. Accept, dismiss, or add your own.",
     },
     {
         phase: "Assemble",
         title: "Cast, Crew & Locations",
         description:
-            "Build out your team with department-level roles, availability, and rate tracking. Scout and manage locations with permit status, parking, power, and sound notes.",
+            "Department-level roles, availability, and rate tracking. Location management with permit status, parking, power, and sound notes.",
     },
     {
         phase: "Schedule",
         title: "Stripeboard & Day Planning",
         description:
-            "Classic color-coded stripeboard with drag-and-drop scheduling. Arrange scenes across shooting days in grid, kanban, timeline, or list view — page counts in industry-standard eighths.",
+            "Drag-and-drop stripeboard with grid, kanban, timeline, and list views. Scene arrangement, day-out-of-days, and page-eighth tracking all stay in sync.",
     },
     {
         phase: "Budget",
-        title: "Budget & Gear Tracking",
+        title: "Budget & Equipment",
         description:
-            "Create budgets with customizable categories and templates. Log expenses, upload receipts with OCR parsing, and track equipment by department so every unit knows what's needed and when.",
+            "Customizable budget categories and templates. Receipt OCR, expense logging, and equipment tracking by department.",
     },
     {
         phase: "Distribute",
-        title: "Call Sheets & Collaboration",
+        title: "Call Sheets & Distribution",
         description:
-            "Auto-generate call sheets from your shooting day data — scenes, call times, locations, department info — and export to PDF. Real-time sync keeps your entire team on the same page.",
+            "Generate call sheets from your shooting day data — scenes, call times, weather, locations, department notes. Export to PDF and distribute to your crew.",
     },
     {
         phase: "Revise",
-        title: "Script Versions & Revisions",
+        title: "Script Revisions",
         description:
-            "Upload new drafts with industry-standard color coding. Track revision history, compare versions, and always know which draft the team is working from.",
+            "Upload new drafts with color-coded revision tracking. Compare versions side by side and keep the whole crew on the current draft.",
     },
 ];
 
@@ -61,9 +61,9 @@ export default function HowItWorks() {
                         How it works
                     </p>
                     <h2 className="font-serif text-[40px] font-normal leading-[1.15] max-w-xl max-md:text-[32px]">
-                        Your full production timeline,
+                        Seven phases,
                         <br />
-                        <em className="italic">from script to screen.</em>
+                        <em className="italic">one connected workflow.</em>
                     </h2>
                 </motion.div>
 

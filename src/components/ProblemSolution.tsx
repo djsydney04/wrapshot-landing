@@ -16,14 +16,14 @@ export default function ProblemSolution() {
                     <div className="col-span-4 max-lg:col-span-12">
                         <p className="text-[11px] uppercase tracking-[0.14em] text-text-muted mb-4">Why Wrapshoot</p>
                         <h2 className="font-serif text-[34px] font-normal leading-[1.15] max-w-[280px] max-lg:max-w-none max-md:text-[30px]">
-                            Built for real-world production work.
+                            One system, prep through wrap.
                         </h2>
                     </div>
                     <div className="col-span-8 max-lg:col-span-12">
                         <p className="text-xl leading-relaxed text-text-secondary max-md:text-[18px]">
-                            Wrapshoot combines traditional film production workflows with modern automation so your team can plan,
-                            schedule, and execute in one system. Stripeboard, call sheets, breakdowns, budget tracking, and
-                            team coordination stay connected from prep through wrap.
+                            Stripeboard, breakdowns, call sheets, budgets, and crew coordination
+                            in a single workspace. Changes propagate across every department automatically,
+                            so your schedule, budget, and call sheets always reflect the same data.
                         </p>
                     </div>
                 </motion.div>

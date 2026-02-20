@@ -4,34 +4,34 @@ import { motion } from "framer-motion";
 
 const features = [
     {
-        title: "Multiple Scheduling Views",
+        title: "Four Scheduling Views",
         description:
-            "Switch between grid, kanban, timeline, and list views. Whatever fits your workflow — the data stays in sync.",
+            "Grid, kanban, timeline, and list. Same data, different lens — switch without losing work.",
     },
     {
-        title: "Confidence Ratings on Suggestions",
+        title: "Confidence-Scored Suggestions",
         description:
-            "Every auto-detected element comes with a confidence score. Accept what's right, dismiss what isn't — you're always in control.",
+            "Auto-detected elements include confidence ratings. Review what the parser found, accept or dismiss per scene.",
     },
     {
-        title: "Real-Time Collaboration",
+        title: "Real-Time Sync",
         description:
-            "Invite your team with role-based permissions. Changes sync instantly so everyone's working from the same source of truth.",
+            "Role-based permissions and live collaboration. One person updates the schedule, everyone sees it immediately.",
     },
     {
-        title: "Receipt OCR & Expense Logging",
+        title: "Receipt OCR",
         description:
-            "Snap a photo of a receipt and let OCR pull the details. Expenses tie directly to your budget categories.",
+            "Photograph a receipt. OCR extracts the line items and maps them to your budget categories automatically.",
     },
     {
-        title: "Industry-Standard Formatting",
+        title: "Standard Formatting",
         description:
-            "Page counts in eighths, color-coded script revisions, and call sheets that match what your crew already expects.",
+            "Eighth-based page counts, color-coded revisions, and call sheets formatted the way your crew expects.",
     },
     {
-        title: "PDF Export & Distribution",
+        title: "PDF Export",
         description:
-            "Generate call sheets, schedules, and reports as clean PDFs ready to share with your entire production.",
+            "Call sheets, schedules, and reports export as clean, print-ready PDFs.",
     },
 ];
 
@@ -49,9 +49,9 @@ export default function Features() {
                         What you get
                     </p>
                     <h2 className="font-serif text-[40px] font-normal leading-[1.15] max-w-xl max-md:text-[32px]">
-                        Built for how
+                        Details that
                         <br />
-                        <em className="italic">productions actually work.</em>
+                        <em className="italic">matter on set.</em>
                     </h2>
                 </motion.div>
 

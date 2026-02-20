@@ -12,20 +12,22 @@ import {
 
 const sections = [
     { id: "getting-started", title: "Getting Started" },
+    { id: "feature-list", title: "Feature List" },
     { id: "creating-project", title: "Creating Your First Project" },
-    { id: "script-analysis", title: "Uploading & Analyzing Scripts" },
+    { id: "script-analysis", title: "Uploading & Analyzing Your Script" },
     { id: "managing-scenes", title: "Managing Scenes" },
     { id: "cast", title: "Building Your Cast" },
     { id: "crew", title: "Organizing Your Crew" },
-    { id: "scheduling", title: "Scheduling & Stripeboard" },
+    { id: "scheduling", title: "Scheduling & Stripboard" },
+    { id: "call-sheets", title: "Call Sheets & Distribution" },
     { id: "breakdown", title: "Scene Breakdown" },
     { id: "budget", title: "Budget & Finance" },
     { id: "locations", title: "Locations" },
     { id: "gear", title: "Gear & Equipment" },
     { id: "collaboration", title: "Team Collaboration" },
+    { id: "assistant", title: "Smart Assistant" },
     { id: "tips", title: "Tips & Best Practices" },
     { id: "faq", title: "Frequently Asked Questions" },
-    { id: "changelog", title: "Changelog" },
 ];
 
 export default function LearnPage() {
@@ -162,7 +164,7 @@ export default function LearnPage() {
                             <ol className="list-decimal list-inside space-y-2 mb-6">
                                 <li>Visit the Wrapshoot website and click <strong>Sign Up</strong></li>
                                 <li>Enter your email address and create a password</li>
-                                <li>Verify your email by clicking the link sent to your inbox</li>
+                                <li>Verify your email address by clicking the link sent to your inbox</li>
                                 <li>Complete your profile with your name and optional phone number</li>
                             </ol>
 
@@ -171,6 +173,27 @@ export default function LearnPage() {
                                 After logging in, you&apos;ll see your <strong>Projects Dashboard</strong> showing all your
                                 projects with their current status, quick-start recommendations, and upcoming shooting days.
                             </p>
+                        </Section>
+
+                        {/* Feature List */}
+                        <Section id="feature-list" title="Feature List">
+                            <p className="mb-4">Use this as a quick feature checklist before diving into full workflows.</p>
+                            <ul className="list-disc list-inside space-y-2 mb-6">
+                                <li>Project creation and setup wizard</li>
+                                <li>AI script upload, parsing, and scene extraction</li>
+                                <li>Scene management (grid, kanban, timeline, list)</li>
+                                <li>Cast directory and invitations</li>
+                                <li>Crew directory, departments, and access controls</li>
+                                <li>Schedule planning (month/week/list)</li>
+                                <li>Drag-and-drop stripboard scheduling</li>
+                                <li>Call sheet drafting, publishing, PDF export, and distribution</li>
+                                <li>Scene breakdown management (props, wardrobe, vehicles, effects, and more)</li>
+                                <li>Budget tracking and finance workflows</li>
+                                <li>Location database, permit status, and location intelligence</li>
+                                <li>Gear and equipment tracking by scene/department</li>
+                                <li>Project sharing with role-based permissions</li>
+                                <li>Project assistant for planning and operational questions</li>
+                            </ul>
                         </Section>
 
                         {/* Creating Your First Project */}
@@ -188,20 +211,41 @@ export default function LearnPage() {
 
                             <h3>Step 3: Setup Wizard</h3>
                             <p>
-                                When you create a new project, Wrapshoot offers a guided <strong>Setup Wizard</strong> to help you
-                                upload your script, add shooting days, cast members, and crew. You can skip any step and complete it later.
+                                When you create a new project, Wrapshoot offers a guided <strong>Setup Wizard</strong> to help you:
                             </p>
+                            <ol className="list-decimal list-inside space-y-2 mb-6">
+                                <li>Upload your script</li>
+                                <li>Add your first shooting days</li>
+                                <li>Add cast members</li>
+                                <li>Add crew members</li>
+                            </ol>
+                            <p className="mb-6">You can skip any step and complete it later.</p>
+
+                            <h3>Step 4: Use the Getting Started Checklist</h3>
+                            <p>
+                                After setup, the <strong>Overview</strong> tab shows a Getting Started checklist so your team can track what
+                                is done and what still needs setup:
+                            </p>
+                            <ul className="list-disc list-inside space-y-2 mb-6">
+                                <li>Upload script</li>
+                                <li>Add scenes</li>
+                                <li>Add cast members</li>
+                                <li>Add crew members</li>
+                                <li>Add shooting days</li>
+                            </ul>
+                            <p>Each checklist row links directly to the section where that task is completed.</p>
                         </Section>
 
-                        {/* Script Analysis */}
-                        <Section id="script-analysis" title="Uploading & Analyzing Scripts">
+                        {/* Uploading & Analyzing Your Script */}
+                        <Section id="script-analysis" title="Uploading & Analyzing Your Script">
                             <div className="bg-bg-alt border border-border rounded-xl p-6 mb-8">
                                 <h4 className="font-medium mb-2">
-                                    How Script Analysis Works
+                                    How AI Script Analysis Works
                                 </h4>
                                 <p className="text-text-secondary text-sm">
-                                    Upload your script PDF and Wrapshoot will automatically extract scenes, identify INT/EXT and
-                                    DAY/NIGHT, detect production elements like props and wardrobe, generate synopses, and estimate shooting times. No manual data entry required.
+                                    Wrapshoot Intelligence can automatically analyze your script to extract all scenes with scene numbers,
+                                    identify INT/EXT and DAY/NIGHT, detect production elements (props, wardrobe, vehicles, etc.),
+                                    generate scene synopses, and estimate shooting times.
                                 </p>
                             </div>
 
@@ -213,21 +257,31 @@ export default function LearnPage() {
                                 <li>Wrapshoot will automatically begin analysis</li>
                             </ol>
 
-                            <h3>Reviewing Results</h3>
-                            <p>After analysis completes:</p>
-                            <ul className="list-disc list-inside space-y-2 mb-6">
-                                <li>Review extracted scenes in the <strong>Scenes</strong> section</li>
-                                <li>Check the <strong>Scene Breakdown</strong> for detected elements</li>
-                                <li>Accept or dismiss suggestions as needed</li>
-                                <li>Make manual adjustments where necessary</li>
-                            </ul>
+                            <h3>Reviewing Script Analysis Results Dashboard</h3>
+                            <p>After analysis completes, open the <strong>Script Analysis Results</strong> panel:</p>
+                            <ol className="list-decimal list-inside space-y-2 mb-6">
+                                <li>Review generated scenes and delete any incorrect entries</li>
+                                <li>Review element categories and remove false positives</li>
+                                <li>Confirm or adjust cast names</li>
+                                <li>Accept or dismiss crew suggestions</li>
+                                <li>Use quick links in the panel to jump into full sections for deeper edits</li>
+                            </ol>
 
                             <h3>Script Versions</h3>
                             <p>
                                 Keep track of revisions by uploading new script versions. Each version is color-coded
-                                (White, Blue, Pink, Yellow, etc.) following industry standards. Compare versions to see
-                                what changed, and always know which draft everyone is working from.
+                                (White, Blue, Pink, Yellow, etc.) following industry standards. Trigger script change analysis
+                                to see what changed. The active version is used for breakdown and scheduling.
                             </p>
+
+                            <h3>Reviewing Script Version Changes</h3>
+                            <p>When a new script version is uploaded:</p>
+                            <ol className="list-decimal list-inside space-y-2 mb-6">
+                                <li>Wait for the change analysis banner to appear</li>
+                                <li>Click <strong>Review</strong> to open version differences</li>
+                                <li>Confirm added, removed, and modified scenes</li>
+                                <li>Update schedule, breakdown, and budget based on the approved changes</li>
+                            </ol>
                         </Section>
 
                         {/* Managing Scenes */}
@@ -242,11 +296,21 @@ export default function LearnPage() {
                             </ul>
 
                             <h3>Adding Scenes Manually</h3>
-                            <p>If you&apos;re not using automatic analysis, add scenes manually:</p>
+                            <p>If you&apos;re not using AI analysis, add scenes manually:</p>
                             <ol className="list-decimal list-inside space-y-2 mb-6">
                                 <li>Click <strong>Add Scene</strong></li>
-                                <li>Enter scene number, synopsis, INT/EXT, DAY/NIGHT, page count, and location</li>
+                                <li>Enter scene details: scene number, synopsis/description, INT or EXT, DAY or NIGHT, page count (in eighths), and location</li>
                             </ol>
+
+                            <h3>Editing Scenes</h3>
+                            <p>Click any scene to open the detail panel where you can:</p>
+                            <ul className="list-disc list-inside space-y-2 mb-6">
+                                <li>Edit all scene information</li>
+                                <li>Assign cast members</li>
+                                <li>Add production elements</li>
+                                <li>View AI suggestions</li>
+                                <li>Add notes</li>
+                            </ul>
 
                             <h3>Scene Status</h3>
                             <p>Track progress with status labels:</p>
@@ -264,7 +328,7 @@ export default function LearnPage() {
                             <ol className="list-decimal list-inside space-y-2 mb-6">
                                 <li>Go to the <strong>Cast</strong> section</li>
                                 <li>Click <strong>Add Cast Member</strong></li>
-                                <li>Enter character name, actor name, contact info, agent info (optional), and rates</li>
+                                <li>Enter character name, actor name, contact info (email, phone), agent info (optional), and day rate / week rate (optional)</li>
                             </ol>
 
                             <h3>Inviting Cast to the Project</h3>
@@ -284,6 +348,14 @@ export default function LearnPage() {
                                 <li><strong>Working</strong> — Currently in production</li>
                                 <li><strong>Wrapped</strong> — Finished shooting</li>
                             </ul>
+
+                            <h3>Assigning Cast to Scenes</h3>
+                            <p>Link cast members to scenes they appear in:</p>
+                            <ol className="list-decimal list-inside space-y-2 mb-6">
+                                <li>Open a scene&apos;s detail panel</li>
+                                <li>Go to the <strong>Cast</strong> tab</li>
+                                <li>Select cast members who appear in this scene</li>
+                            </ol>
                         </Section>
 
                         {/* Organizing Your Crew */}
@@ -292,7 +364,7 @@ export default function LearnPage() {
                             <ol className="list-decimal list-inside space-y-2 mb-6">
                                 <li>Go to the <strong>Crew</strong> section</li>
                                 <li>Click <strong>Add Crew Member</strong></li>
-                                <li>Enter name, role/position, department, contact info, and rate</li>
+                                <li>Enter name, role/position, department, contact info, and rate (optional)</li>
                             </ol>
 
                             <h3>Departments</h3>
@@ -310,13 +382,22 @@ export default function LearnPage() {
                                 Designate department heads by checking the <strong>Department Head</strong> option
                                 when adding or editing a crew member. Department heads may have additional permissions.
                             </p>
+
+                            <h3>Inviting Crew</h3>
+                            <p>Similar to cast, invite crew members to access the project:</p>
+                            <ol className="list-decimal list-inside space-y-2 mb-6">
+                                <li>Click <strong>Invite</strong> on a crew member</li>
+                                <li>Enter their email</li>
+                                <li>Select their permission level</li>
+                                <li>They&apos;ll receive an invitation link</li>
+                            </ol>
                         </Section>
 
-                        {/* Scheduling & Stripeboard */}
-                        <Section id="scheduling" title="Scheduling & Stripeboard">
-                            <h3>Understanding the Stripeboard</h3>
+                        {/* Scheduling & Stripboard */}
+                        <Section id="scheduling" title="Scheduling & Stripboard">
+                            <h3>Understanding the Stripboard</h3>
                             <p>
-                                The stripeboard is the traditional film scheduling tool, now digital. Each scene is
+                                The stripboard is the traditional film scheduling tool, now digital. Each scene is
                                 represented as a colored strip, color-coded by INT/EXT and DAY/NIGHT. Drag strips
                                 to assign scenes to shooting days.
                             </p>
@@ -342,6 +423,52 @@ export default function LearnPage() {
                                 <li><strong>Department Calls</strong> — Staggered times for different departments</li>
                                 <li><strong>Cast Calls</strong> — Individual call times for each actor</li>
                             </ul>
+
+                            <h3>Reordering Scenes</h3>
+                            <p>
+                                Within a shooting day, drag scenes to change the shooting order. Scene order is saved automatically.
+                            </p>
+
+                            <h3>Calendar Views</h3>
+                            <p>Switch between views:</p>
+                            <ul className="list-disc list-inside space-y-2 mb-6">
+                                <li><strong>Stripboard</strong> — Traditional strip view</li>
+                                <li><strong>Monthly Calendar</strong> — Overview of the entire shoot</li>
+                                <li><strong>Weekly Calendar</strong> — Detailed weekly view</li>
+                            </ul>
+                        </Section>
+
+                        {/* Call Sheets & Distribution */}
+                        <Section id="call-sheets" title="Call Sheets & Distribution">
+                            <h3>Creating a Call Sheet</h3>
+                            <ol className="list-decimal list-inside space-y-2 mb-6">
+                                <li>Go to your project and open the <strong>Call Sheets</strong> section</li>
+                                <li>Select a shooting day</li>
+                                <li>If no call sheet exists yet, click <strong>Create</strong></li>
+                                <li>Fill in key details: general notes, safety notes, parking and meal notes, department and cast call times</li>
+                            </ol>
+
+                            <h3>Saving Draft vs Publishing</h3>
+                            <ul className="list-disc list-inside space-y-2 mb-6">
+                                <li>Click <strong>Save</strong> to keep a draft</li>
+                                <li>Click <strong>Publish</strong> when the sheet is ready for the team</li>
+                                <li>Published versions are tracked per shooting day</li>
+                            </ul>
+
+                            <h3>Exporting a PDF</h3>
+                            <ol className="list-decimal list-inside space-y-2 mb-6">
+                                <li>Open the call sheet for a shooting day</li>
+                                <li>Click <strong>Download PDF</strong></li>
+                                <li>Wrapshoot saves any pending edits, then generates the file</li>
+                            </ol>
+
+                            <h3>Distributing to Cast &amp; Crew</h3>
+                            <ol className="list-decimal list-inside space-y-2 mb-6">
+                                <li>Open the call sheet and click <strong>Distribute</strong></li>
+                                <li>Select cast and crew recipients (only members with email)</li>
+                                <li>Click <strong>Send</strong></li>
+                                <li>Recipients receive the call sheet by email</li>
+                            </ol>
                         </Section>
 
                         {/* Scene Breakdown */}
@@ -352,8 +479,8 @@ export default function LearnPage() {
                                 vehicles, makeup/hair, special effects, background actors, special equipment, and more.
                             </p>
 
-                            <h3>Using Auto-Generated Breakdowns</h3>
-                            <p>If you used script analysis, many elements are pre-populated:</p>
+                            <h3>Using AI-Generated Breakdowns</h3>
+                            <p>If you used AI script analysis, many elements are pre-populated:</p>
                             <ol className="list-decimal list-inside space-y-2 mb-6">
                                 <li>Open a scene&apos;s detail panel</li>
                                 <li>Go to the <strong>Breakdown</strong> tab</li>
@@ -361,12 +488,21 @@ export default function LearnPage() {
                                 <li>Click <strong>Accept</strong> to confirm or <strong>Dismiss</strong> to remove</li>
                             </ol>
 
+                            <h3>Adding Elements Manually</h3>
+                            <ol className="list-decimal list-inside space-y-2 mb-6">
+                                <li>Open a scene</li>
+                                <li>Go to the <strong>Breakdown</strong> tab</li>
+                                <li>Click <strong>Add Element</strong></li>
+                                <li>Select a category</li>
+                                <li>Enter the element name and any notes</li>
+                            </ol>
+
                             <h3>Element Categories</h3>
                             <p>Wrapshoot supports 25+ breakdown categories:</p>
                             <div className="grid grid-cols-2 gap-2 mb-6">
                                 {["Names & Character References", "Background/Extras", "Props", "Vehicles",
                                     "Wardrobe", "Makeup/Hair", "Camera", "Grip & Electric",
-                                    "Sound & Music", "SFX (Practical)", "VFX (Visual)", "Mechanical Effects",
+                                    "Sound & Music", "SFX (Practical Effects)", "VFX (Visual Effects)", "Mechanical Effects",
                                     "Art Department", "Set Dressing", "Greenery", "Special Equipment",
                                     "Animals", "Safety Notes", "Location Notes", "General Comments"].map((cat) => (
                                         <span key={cat} className="text-sm text-text-secondary">{cat}</span>
@@ -391,6 +527,14 @@ export default function LearnPage() {
                                 <li><strong>Line Items</strong> — e.g., &quot;Camera Operator - 10 days @ $500/day&quot;</li>
                             </ul>
 
+                            <h3>Adding Line Items</h3>
+                            <ol className="list-decimal list-inside space-y-2 mb-6">
+                                <li>Select a category</li>
+                                <li>Click <strong>Add Line Item</strong></li>
+                                <li>Enter description, quantity, unit type (days, weeks, flat, etc.), and unit rate</li>
+                                <li>The total calculates automatically</li>
+                            </ol>
+
                             <h3>Tracking Expenses</h3>
                             <p>Log actual spending against your budget:</p>
                             <ol className="list-decimal list-inside space-y-2 mb-6">
@@ -413,6 +557,28 @@ export default function LearnPage() {
                                 <li><span className="text-yellow-600 font-medium">On Track</span> — Close to estimates</li>
                                 <li><span className="text-red-600 font-medium">Over Budget</span> — Exceeding estimates</li>
                             </ul>
+
+                            <h3>Department Budget Workflow</h3>
+                            <div className="bg-bg-alt border border-border rounded-xl p-6 mb-6">
+                                <p className="text-text-secondary text-sm mb-4">
+                                    Use this when department heads and finance need a structured approval flow:
+                                </p>
+                                <ol className="list-decimal list-inside space-y-2 text-sm mb-4">
+                                    <li>Finance assigns a department owner in the budget builder</li>
+                                    <li>Department owner updates line items and allocation</li>
+                                    <li>Department owner clicks <strong>Submit</strong> when ready</li>
+                                    <li>Finance reviews and chooses <strong>Approve</strong> or <strong>Request Revision</strong></li>
+                                    <li>If needed, finance can reopen an approved department for further changes</li>
+                                </ol>
+                                <p className="text-text-secondary text-sm">Department statuses move through:</p>
+                                <ul className="list-disc list-inside space-y-1 text-sm">
+                                    <li><strong>Not Started</strong></li>
+                                    <li><strong>In Progress</strong></li>
+                                    <li><strong>Submitted</strong></li>
+                                    <li><strong>Revision Requested</strong></li>
+                                    <li><strong>Approved</strong></li>
+                                </ul>
+                            </div>
                         </Section>
 
                         {/* Locations */}
@@ -436,6 +602,24 @@ export default function LearnPage() {
                             <h3>Location Notes</h3>
                             <p>Add important notes about each location: parking availability, load-in instructions,
                                 power availability, sound considerations, and contact person.</p>
+
+                            <h3>Assigning Locations to Scenes</h3>
+                            <p>When editing a scene, select its location from your location database.</p>
+
+                            <h3>Using Location Intelligence</h3>
+                            <div className="bg-bg-alt border border-border rounded-xl p-6 mb-6">
+                                <p className="text-text-secondary text-sm mb-4">
+                                    For each selected location, Wrapshoot Intelligence can generate nearby support suggestions,
+                                    permit office guidance, permit checklist items, and logistics risks and next actions.
+                                </p>
+                                <p className="text-text-secondary text-sm">How to use it:</p>
+                                <ol className="list-decimal list-inside space-y-2 text-sm">
+                                    <li>Open the <strong>Locations</strong> section and select a location</li>
+                                    <li>Open the <strong>Location Intelligence</strong> panel</li>
+                                    <li>Review suggestions and permit guidance</li>
+                                    <li>Click <strong>Refresh</strong> after changing location notes to regenerate recommendations</li>
+                                </ol>
+                            </div>
                         </Section>
 
                         {/* Gear & Equipment */}
@@ -447,21 +631,23 @@ export default function LearnPage() {
                                 <li>Enter item name, category, department responsible, and notes/specifications</li>
                             </ol>
 
+                            <h3>Scene-Based Gear</h3>
+                            <p>
+                                Track which equipment is needed for specific scenes. Open a scene&apos;s detail panel,
+                                go to the <strong>Gear</strong> tab, and select required equipment.
+                            </p>
+
                             <h3>Equipment Categories</h3>
                             <ul className="list-disc list-inside space-y-2 mb-6">
                                 <li><strong>Camera</strong> — cameras, lenses, accessories</li>
                                 <li><strong>Lighting</strong> — lights, stands, modifiers</li>
                                 <li><strong>Sound</strong> — mics, recorders, playback</li>
                                 <li><strong>Art</strong> — set dec, props</li>
-                                <li><strong>Costume & Props</strong></li>
-                                <li><strong>Vehicles & Special Equipment</strong></li>
+                                <li><strong>Costume</strong></li>
+                                <li><strong>Props</strong></li>
+                                <li><strong>Vehicles</strong></li>
+                                <li><strong>Special Equipment</strong></li>
                             </ul>
-
-                            <h3>Scene-Based Gear</h3>
-                            <p>
-                                Track which equipment is needed for specific scenes. Open a scene&apos;s detail panel,
-                                go to the <strong>Gear</strong> tab, and select required equipment.
-                            </p>
                         </Section>
 
                         {/* Team Collaboration */}
@@ -497,14 +683,41 @@ export default function LearnPage() {
                             </p>
                         </Section>
 
+                        {/* Smart Assistant */}
+                        <Section id="assistant" title="Smart Assistant">
+                            <h3>What It Can Help With</h3>
+                            <p>The Smart Assistant can answer project-specific questions about:</p>
+                            <ul className="list-disc list-inside space-y-2 mb-6">
+                                <li>Scene status and unscheduled work</li>
+                                <li>Permit follow-up and location risks</li>
+                                <li>Schedule planning and sequencing</li>
+                                <li>Cast/crew context from current project data</li>
+                            </ul>
+
+                            <h3>How to Use It</h3>
+                            <ol className="list-decimal list-inside space-y-2 mb-6">
+                                <li>Open the <strong>Assistant</strong> section in your project</li>
+                                <li>Type a question or pick a quick prompt</li>
+                                <li>Send with <kbd className="px-2 py-1 bg-white border border-border rounded text-xs">Cmd/Ctrl + Enter</kbd> or click <strong>Send</strong></li>
+                                <li>Review suggestions and apply changes in the linked project sections</li>
+                            </ol>
+
+                            <h3>Tips for Better Results</h3>
+                            <ul className="list-disc list-inside space-y-2 mb-6">
+                                <li>Ask specific questions (&quot;What scenes are unscheduled for next week?&quot;)</li>
+                                <li>Include constraints (days, locations, cast availability)</li>
+                                <li>Follow up with focused refinement prompts</li>
+                            </ul>
+                        </Section>
+
                         {/* Tips & Best Practices */}
                         <Section id="tips" title="Tips & Best Practices">
-                            <h3>Getting the Most from Script Analysis</h3>
+                            <h3>Getting the Most from AI Analysis</h3>
                             <ul className="list-disc list-inside space-y-2 mb-6">
                                 <li>Upload clean, well-formatted PDFs</li>
                                 <li>Standard screenplay format works best</li>
-                                <li>Review suggestions carefully—they&apos;re helpful but not perfect</li>
-                                <li>Use analysis as a starting point, then refine manually</li>
+                                <li>Review AI suggestions carefully—they&apos;re helpful but not perfect</li>
+                                <li>Use AI as a starting point, then refine manually</li>
                             </ul>
 
                             <h3>Efficient Scheduling</h3>
@@ -547,7 +760,7 @@ export default function LearnPage() {
                         <Section id="faq" title="Frequently Asked Questions">
                             <h3>Can I import data from other software?</h3>
                             <p>
-                                Currently, Wrapshoot supports PDF script import with automatic analysis. CSV import for cast/crew is planned for a future update.
+                                Currently, Wrapshoot supports PDF script import with AI analysis. CSV import for cast/crew is planned for a future update.
                             </p>
 
                             <h3>Is my data secure?</h3>
@@ -574,54 +787,6 @@ export default function LearnPage() {
                             </p>
                         </Section>
 
-                        {/* Changelog */}
-                        <Section id="changelog" title="Changelog">
-                            <div className="space-y-10">
-                                <div>
-                                    <div className="flex items-center gap-3 mb-4">
-                                        <h3 className="!mb-0">February 2026</h3>
-                                        <span className="px-2.5 py-0.5 text-xs font-medium bg-text text-white rounded-full">Launch</span>
-                                    </div>
-                                    <p className="text-sm font-medium text-text mb-2">New</p>
-                                    <ul className="list-disc list-inside space-y-2 mb-6">
-                                        <li>Automatic script analysis with scene extraction and element detection</li>
-                                        <li>Visual stripeboard with drag-and-drop scheduling</li>
-                                        <li>Call sheet generation with PDF export</li>
-                                        <li>Budget tracking with receipt OCR scanning</li>
-                                        <li>Real-time team collaboration with role-based permissions</li>
-                                        <li>Location and permit tracking</li>
-                                        <li>Gear and equipment management</li>
-                                        <li>Script version control with industry-standard color coding</li>
-                                    </ul>
-                                </div>
-
-                                <div>
-                                    <h3>January 2026</h3>
-                                    <p className="text-sm font-medium text-text mb-2">Improved</p>
-                                    <ul className="list-disc list-inside space-y-2 mb-4">
-                                        <li>Script analysis accuracy and element detection confidence ratings</li>
-                                        <li>Stripeboard performance with large scene counts</li>
-                                        <li>Mobile responsiveness across all views</li>
-                                    </ul>
-                                    <p className="text-sm font-medium text-text mb-2">Fixed</p>
-                                    <ul className="list-disc list-inside space-y-2 mb-6">
-                                        <li>Scene reorder sync issue when multiple users edit simultaneously</li>
-                                        <li>PDF export formatting for call sheets with long location names</li>
-                                    </ul>
-                                </div>
-
-                                <div>
-                                    <h3>December 2025</h3>
-                                    <p className="text-sm font-medium text-text mb-2">New</p>
-                                    <ul className="list-disc list-inside space-y-2 mb-6">
-                                        <li>Closed beta launch</li>
-                                        <li>Core scheduling and scene breakdown engine</li>
-                                        <li>Team invitation system with email onboarding</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </Section>
-
                         {/* Help Section */}
                         <div className="mt-20 pt-12 border-t border-border">
                             <h2 className="font-serif text-2xl font-normal mb-4">Getting Help</h2>
@@ -638,6 +803,7 @@ export default function LearnPage() {
                                 <ul className="list-disc list-inside space-y-2 mb-6">
                                     <li>Email: <a href="mailto:support@wrapshoot.com" className="text-text font-medium hover:underline">support@wrapshoot.com</a></li>
                                     <li>Check our FAQ section above</li>
+                                    <li>Join our community forums</li>
                                 </ul>
                             </div>
                             <div className="flex gap-4 max-md:flex-col">
@@ -655,7 +821,7 @@ export default function LearnPage() {
                                 </a>
                             </div>
                             <p className="text-sm text-text-muted mt-8 italic">
-                                This guide is updated regularly as new features are added. Last updated: February 2026
+                                This guide is updated regularly as new features are added. Last updated: February 2026 (feature workflow refresh).
                             </p>
                         </div>
                     </div>

@@ -24,16 +24,16 @@ export default function Hero() {
                 >
                     <motion.div style={{ y: copyY }}>
                         <p className="hero-kicker mb-8 justify-center">
-                            Built for working film crews
+                            Production management software
                         </p>
                         <h1 className="font-serif text-[72px] font-normal leading-[1.05] tracking-[-0.03em] mb-7 text-text max-lg:text-[56px] max-md:text-[40px]">
-                            From script to screen,
+                            Breakdowns, boards,
                             <br />
-                            <em className="italic">keep the whole set in sync.</em>
+                            <em className="italic">and call sheets in one place.</em>
                         </h1>
                         <p className="text-[19px] leading-[1.7] text-text-secondary mx-auto max-w-[540px] mb-14 max-md:text-[17px] max-md:mb-10">
-                            The all-in-one production workspace to plan shoot days,
-                            coordinate departments, and publish call sheets.
+                            Wrapshoot handles scheduling, budgets, crew coordination,
+                            and distribution so you can focus on the shoot.
                         </p>
                         <motion.div
                             className="flex items-center justify-center gap-4 max-md:flex-col"
@@ -42,7 +42,7 @@ export default function Hero() {
                             transition={{ delay: 0.2, duration: 0.5 }}
                         >
                             <a href="https://app.wrapshoot.com" className="btn btn-primary">
-                                Start Your Production Free
+                                Start Free
                             </a>
                             <a href="#how-it-works" className="btn btn-outline">
                                 See How It Works

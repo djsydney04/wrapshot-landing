@@ -8,31 +8,31 @@ const audiences = [
         icon: <Briefcase size={24} />,
         title: "1st ADs & Coordinators",
         description:
-            "Your command center for the entire shoot. Manage the stripeboard, generate call sheets, track every moving piece—all in one place.",
+            "Stripeboard, call sheets, and day planning in one view. Stop rebuilding spreadsheets every time the schedule changes.",
     },
     {
         icon: <LineChart size={24} />,
         title: "Line Producers & UPMs",
         description:
-            "See budget impact in real-time. Track cast days, location costs, and schedule efficiency. Know exactly where your money is going.",
+            "Budget tracking tied directly to your schedule. Cast days, location costs, and overages update as the board moves.",
     },
     {
         icon: <Users size={24} />,
         title: "Department Heads",
         description:
-            "Know exactly what's needed and when. Filter to your department, see prep days, coordinate with other teams seamlessly.",
+            "Filter to your department. See what you need, when you need it, and what other departments are expecting from you.",
     },
     {
         icon: <Clapperboard size={24} />,
         title: "Production Managers",
         description:
-            "Oversee all aspects of your production. From budgets to schedules, cast to crew—maintain visibility across your entire project.",
+            "Full visibility across budget, schedule, crew, and locations without chasing down separate documents.",
     },
     {
         icon: <Film size={24} />,
         title: "Independent Filmmakers",
         description:
-            "Professional-grade tools without the learning curve or the price tag. Start free, scale when you need to.",
+            "The same workflow used on larger productions, scaled down. Free tier included.",
     },
 ];
 
@@ -49,8 +49,8 @@ export default function WhoItsFor() {
                 >
                     <p className="text-xs uppercase tracking-[0.1em] text-text-muted mb-4">Who it&apos;s for</p>
                     <h2 className="font-serif text-[40px] font-normal max-w-2xl max-md:text-[32px]">
-                        Made for the people who<br />
-                        <em className="italic">make movies happen.</em>
+                        Built for every department,<br />
+                        <em className="italic">not just production.</em>
                     </h2>
                 </motion.div>
 

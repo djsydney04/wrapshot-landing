@@ -6,35 +6,35 @@ import { motion, AnimatePresence } from "framer-motion";
 const faqs = [
     {
         q: "Is there a free plan?",
-        a: "Yes! Our Free plan lets you manage 1 project with up to 3 team members. It includes basic scene management and community support—perfect for getting started.",
+        a: "Yes. The free tier covers one project with up to three team members, including scene management and community support.",
     },
     {
-        q: "How long does it take to get started?",
-        a: "Most teams are up and running in under an hour. Upload your script for automatic analysis, or start from scratch and build your production manually.",
+        q: "How long does setup take?",
+        a: "Most teams are working within an hour. Upload a script for automatic parsing, or build your production from scratch.",
     },
     {
-        q: "Can I import data from other software?",
-        a: "Currently, Wrapshoot supports PDF script import with automatic analysis. We extract scenes, elements, and more automatically. CSV import for cast/crew is planned for a future update.",
+        q: "Can I import from other tools?",
+        a: "Wrapshoot supports PDF script import with automatic scene and element extraction. CSV import for cast and crew data is on the roadmap.",
     },
     {
         q: "Is my data secure?",
-        a: "Absolutely. All data is encrypted in transit and at rest. We use industry-standard security practices and secure cloud infrastructure to protect your productions.",
+        a: "All data is encrypted in transit and at rest. We use standard security practices and secure cloud infrastructure.",
     },
     {
-        q: "Can multiple people edit at the same time?",
-        a: "Yes! Wrapshoot supports real-time collaboration. Changes sync instantly across all team members, so everyone is always on the same page.",
+        q: "Does it support simultaneous editing?",
+        a: "Yes. Real-time collaboration is built in — changes sync across all team members instantly.",
     },
     {
         q: "How does script analysis work?",
-        a: "Upload your script PDF and Wrapshoot automatically extracts scenes, detects INT/EXT and DAY/NIGHT, identifies production elements like props and wardrobe, generates synopses, and estimates shooting times. Review and accept suggestions with a click.",
+        a: "Upload a PDF. Wrapshoot extracts scenes, detects INT/EXT and DAY/NIGHT, flags elements like props and wardrobe, generates synopses, and estimates page counts. You review and accept before anything lands on the board.",
     },
     {
-        q: "What can I export?",
-        a: "You can export call sheets as PDF, budget reports, and more export options are coming soon. Everything is designed to integrate smoothly with your existing workflow.",
+        q: "What export formats are available?",
+        a: "Call sheets, schedules, and budget reports export as PDF. Additional export formats are in development.",
     },
     {
-        q: "Do I need technical knowledge to use Wrapshoot?",
-        a: "Not at all. Wrapshoot is designed for filmmakers, not tech experts. The interface is intuitive and mirrors traditional film production workflows you already know.",
+        q: "Do I need technical knowledge?",
+        a: "No. The interface mirrors traditional production workflows — stripeboards, breakdowns, call sheets. If you've worked on a set, you already know how to use it.",
     },
 ];
 

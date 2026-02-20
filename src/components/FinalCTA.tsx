@@ -14,14 +14,14 @@ export default function FinalCTA() {
                     transition={{ duration: 0.6 }}
                 >
                     <h2 className="font-serif text-[40px] font-normal leading-[1.15] mb-4 max-md:text-[32px]">
-                        Ready to start your production?
+                        Start your next production.
                     </h2>
                     <p className="text-lg text-text-secondary mb-8">
-                        Free for your first project. No credit card required.
+                        Free tier available. No credit card required.
                     </p>
                     <div className="flex items-center justify-center gap-4 max-md:flex-col">
                         <a href="https://app.wrapshoot.com" className="btn btn-primary">
-                            Start Your Production Free
+                            Get Started
                         </a>
                         <a href="mailto:hello@wrapshoot.com" className="btn btn-outline">
                             Talk to Sales

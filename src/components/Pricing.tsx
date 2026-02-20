@@ -8,7 +8,7 @@ const tiers = [
         name: "Free",
         price: "$0",
         note: "forever",
-        description: "Perfect for getting started with your first production.",
+        description: "One project, core features, no time limit.",
         features: [
             "1 project",
             "Basic scene management",
@@ -22,7 +22,7 @@ const tiers = [
         name: "Pro",
         price: "$49",
         note: "/month",
-        description: "For serious filmmakers and production teams.",
+        description: "Full platform. Unlimited projects and crew.",
         features: [
             "Unlimited projects",
             "Full script analysis",
@@ -38,7 +38,7 @@ const tiers = [
         name: "Studio",
         price: "Custom",
         note: "contact us",
-        description: "For studios and large-scale productions.",
+        description: "Multi-production pipelines and custom integrations.",
         features: [
             "Everything in Pro",
             "Advanced analytics",
