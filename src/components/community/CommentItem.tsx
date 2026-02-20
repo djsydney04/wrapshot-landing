@@ -26,12 +26,12 @@ interface CommentItemProps {
 }
 
 export default function CommentItem({ comment, postId, userVoted, depth = 0, onReplyCreated }: CommentItemProps) {
-  const { user, setShowAuthModal } = useAuth();
+  const { user, redirectToLogin } = useAuth();
   const [showReply, setShowReply] = useState(false);
 
   const handleReplyClick = () => {
     if (!user) {
-      setShowAuthModal(true);
+      redirectToLogin();
       return;
     }
     setShowReply(true);

@@ -21,7 +21,7 @@ interface PostFormProps {
 }
 
 export default function PostForm({ open, onClose, defaultCategoryId, onCreated }: PostFormProps) {
-  const { user, setShowAuthModal } = useAuth();
+  const { user, redirectToLogin } = useAuth();
   const [categories, setCategories] = useState<Category[]>([]);
   const [categoryId, setCategoryId] = useState(defaultCategoryId || "");
   const [title, setTitle] = useState("");
@@ -46,7 +46,7 @@ export default function PostForm({ open, onClose, defaultCategoryId, onCreated }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!user) {
-      setShowAuthModal(true);
+      redirectToLogin();
       return;
     }
 

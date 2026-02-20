@@ -5,7 +5,7 @@ import { LogOut, User } from "lucide-react";
 import { useAuth } from "@/lib/auth-context";
 
 export default function UserMenu() {
-  const { user, profile, loading, setShowAuthModal, signOut } = useAuth();
+  const { user, profile, loading, redirectToLogin, signOut } = useAuth();
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -26,7 +26,7 @@ export default function UserMenu() {
   if (!user) {
     return (
       <button
-        onClick={() => setShowAuthModal(true)}
+        onClick={() => redirectToLogin()}
         className="btn btn-outline !px-4 !py-2 !text-sm"
       >
         Sign In

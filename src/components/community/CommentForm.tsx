@@ -13,7 +13,7 @@ interface CommentFormProps {
 }
 
 export default function CommentForm({ postId, parentId, onCreated, onCancel, placeholder }: CommentFormProps) {
-  const { user, setShowAuthModal } = useAuth();
+  const { user, redirectToLogin } = useAuth();
   const [body, setBody] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -21,7 +21,7 @@ export default function CommentForm({ postId, parentId, onCreated, onCancel, pla
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!user) {
-      setShowAuthModal(true);
+      redirectToLogin();
       return;
     }
     if (!body.trim()) return;

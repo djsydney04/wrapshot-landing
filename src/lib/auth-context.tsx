@@ -16,12 +16,11 @@ interface AuthContextType {
   session: Session | null;
   profile: Profile | null;
   loading: boolean;
-  showAuthModal: boolean;
-  setShowAuthModal: (show: boolean) => void;
-  signIn: (email: string, password: string) => Promise<{ error: string | null }>;
-  signUp: (email: string, password: string, username: string) => Promise<{ error: string | null }>;
+  redirectToLogin: (returnPath?: string) => void;
   signOut: () => Promise<void>;
 }
+
+const AUTH_APP_URL = process.env.NEXT_PUBLIC_AUTH_APP_URL || "https://app.wrapshoot.com";
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
@@ -30,7 +29,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [session, setSession] = useState<Session | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
   const [loading, setLoading] = useState(true);
-  const [showAuthModal, setShowAuthModal] = useState(false);
 
   const fetchProfile = useCallback(async (userId: string) => {
     const { data } = await getSupabase()
@@ -62,18 +60,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return () => subscription.unsubscribe();
   }, [fetchProfile]);
 
-  const signIn = async (email: string, password: string) => {
-    const { error } = await getSupabase().auth.signInWithPassword({ email, password });
-    return { error: error?.message ?? null };
-  };
-
-  const signUp = async (email: string, password: string, username: string) => {
-    const { error } = await getSupabase().auth.signUp({
-      email,
-      password,
-      options: { data: { username, display_name: username } },
-    });
-    return { error: error?.message ?? null };
+  const redirectToLogin = (returnPath?: string) => {
+    const currentPath = returnPath || window.location.pathname;
+    const callbackUrl = `${window.location.origin}/community/auth/callback?next=${encodeURIComponent(currentPath)}`;
+    window.location.href = `${AUTH_APP_URL}/auth/community?return_to=${encodeURIComponent(callbackUrl)}`;
   };
 
   const signOut = async () => {
@@ -83,7 +73,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   return (
     <AuthContext.Provider
-      value={{ user, session, profile, loading, showAuthModal, setShowAuthModal, signIn, signUp, signOut }}
+      value={{ user, session, profile, loading, redirectToLogin, signOut }}
     >
       {children}
     </AuthContext.Provider>

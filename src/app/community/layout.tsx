@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { AuthProvider } from "@/lib/auth-context";
-import AuthModal from "@/components/community/AuthModal";
 
 export const metadata: Metadata = {
   title: "Community — Wrapshoot",
@@ -16,7 +15,6 @@ export default function CommunityLayout({ children }: { children: React.ReactNod
   return (
     <AuthProvider>
       {children}
-      <AuthModal />
     </AuthProvider>
   );
 }
