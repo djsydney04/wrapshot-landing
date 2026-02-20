@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import Link from "next/link";
+import posthog from "posthog-js";
 
 export default function Navigation() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -40,7 +41,7 @@ export default function Navigation() {
                         <Link href="/community" className="studio-nav-link text-sm font-medium">Community</Link>
                     </div>
 
-                    <a href="https://app.wrapshoot.com" className="btn btn-primary !px-5 !py-2.5 !text-sm">
+                    <a href="https://app.wrapshoot.com" className="btn btn-primary !px-5 !py-2.5 !text-sm" onClick={() => posthog.capture("cta_clicked", { location: "nav", label: "Get Started" })}>
                         Get Started
                     </a>
                 </div>

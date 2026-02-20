@@ -18,6 +18,7 @@ export default function Footer() {
                         <Link href="/community" className="studio-nav-link text-sm">Community</Link>
                         <a href="#faq" className="studio-nav-link text-sm">FAQ</a>
                         <a href="mailto:hello@wrapshoot.com" className="studio-nav-link text-sm">Contact</a>
+                        <Link href="/jobs" className="studio-nav-link text-sm">Jobs</Link>
                     </div>
                 </div>
 

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import posthog from "posthog-js";
 
 const faqs = [
     {
@@ -70,7 +71,10 @@ export default function FAQ() {
                             >
                                 <button
                                     className="flex justify-between items-center w-full py-6 text-base font-medium text-left text-text max-md:text-[15px] max-md:py-5"
-                                    onClick={() => setOpen(open === i ? null : i)}
+                                    onClick={() => {
+                                        if (open !== i) posthog.capture("faq_opened", { question: faq.q });
+                                        setOpen(open === i ? null : i);
+                                    }}
                                 >
                                     {faq.q}
                                     <span className={`text-xl text-text-muted transition-transform duration-200 ${open === i ? "rotate-45" : ""}`}>

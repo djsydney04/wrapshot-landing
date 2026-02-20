@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import posthog from "posthog-js";
 
 const tiers = [
     {
@@ -100,6 +101,7 @@ export default function Pricing() {
                                         ? "btn-primary"
                                         : "btn-outline"
                                     }`}
+                                onClick={() => posthog.capture("pricing_cta_clicked", { plan: tier.name, label: tier.cta })}
                             >
                                 {tier.cta}
                             </a>
