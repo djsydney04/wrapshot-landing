@@ -181,7 +181,7 @@ export default function LearnPage() {
                             <ul className="list-disc list-inside space-y-2 mb-6">
                                 <li>Project creation and setup wizard</li>
                                 <li>AI script upload, parsing, and scene extraction</li>
-                                <li>Scene management (grid, kanban, timeline, list)</li>
+                                <li>Scene management (grid, timeline, list)</li>
                                 <li>Cast directory and invitations</li>
                                 <li>Crew directory, departments, and access controls</li>
                                 <li>Schedule planning (month/week/list)</li>
@@ -290,7 +290,6 @@ export default function LearnPage() {
                             <p>Access scenes through the <strong>Scenes</strong> section. Choose your preferred view:</p>
                             <ul className="list-disc list-inside space-y-2 mb-6">
                                 <li><strong>Grid View</strong> — Visual cards showing scene thumbnails</li>
-                                <li><strong>Kanban View</strong> — Organized by status (Not Scheduled, In Progress, Completed)</li>
                                 <li><strong>Timeline View</strong> — Gantt chart showing schedule</li>
                                 <li><strong>List View</strong> — Detailed table format</li>
                             </ul>
@@ -299,7 +298,7 @@ export default function LearnPage() {
                             <p>If you&apos;re not using AI analysis, add scenes manually:</p>
                             <ol className="list-decimal list-inside space-y-2 mb-6">
                                 <li>Click <strong>Add Scene</strong></li>
-                                <li>Enter scene details: scene number, synopsis/description, INT or EXT, DAY or NIGHT, page count (in eighths), and location</li>
+                                <li>Enter scene details: scene number, synopsis/description, INT or EXT, DAY or NIGHT, page count and location</li>
                             </ol>
 
                             <h3>Editing Scenes</h3>
