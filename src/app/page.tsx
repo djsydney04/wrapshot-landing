@@ -9,21 +9,22 @@ import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
+import SectionTracker from "@/components/SectionTracker";
 
 export default function Home() {
   return (
     <>
       <Navigation />
       <main>
-        <Hero />
-        <ProblemSolution />
-        <HowItWorks />
-        <Features />
-        <WhoItsFor />
-        <SocialProof />
-        <Pricing />
-        <FAQ />
-        <FinalCTA />
+        <SectionTracker section="hero"><Hero /></SectionTracker>
+        <SectionTracker section="problem_solution"><ProblemSolution /></SectionTracker>
+        <SectionTracker section="how_it_works"><HowItWorks /></SectionTracker>
+        <SectionTracker section="features"><Features /></SectionTracker>
+        <SectionTracker section="who_its_for"><WhoItsFor /></SectionTracker>
+        <SectionTracker section="social_proof"><SocialProof /></SectionTracker>
+        <SectionTracker section="pricing"><Pricing /></SectionTracker>
+        <SectionTracker section="faq"><FAQ /></SectionTracker>
+        <SectionTracker section="final_cta"><FinalCTA /></SectionTracker>
       </main>
       <Footer />
     </>

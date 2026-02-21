@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import posthog from "posthog-js";
 
 export default function Hero() {
     const sectionRef = useRef<HTMLElement>(null);
@@ -41,10 +42,10 @@ export default function Hero() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2, duration: 0.5 }}
                         >
-                            <a href="https://app.wrapshoot.com" className="btn btn-primary">
+                            <a href="https://app.wrapshoot.com" className="btn btn-primary" onClick={() => posthog.capture("cta_clicked", { location: "hero", label: "Start Free" })}>
                                 Start Free
                             </a>
-                            <a href="#how-it-works" className="btn btn-outline">
+                            <a href="#how-it-works" className="btn btn-outline" onClick={() => posthog.capture("cta_clicked", { location: "hero", label: "See How It Works" })}>
                                 See How It Works
                             </a>
                         </motion.div>

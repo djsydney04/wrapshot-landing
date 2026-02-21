@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { AuthProvider } from "@/lib/auth-context";
+import CommunityAuthGate from "@/components/community/CommunityAuthGate";
 
 export const metadata: Metadata = {
   title: "Community — Wrapshoot",
@@ -14,7 +15,9 @@ export const metadata: Metadata = {
 export default function CommunityLayout({ children }: { children: React.ReactNode }) {
   return (
     <AuthProvider>
-      {children}
+      <CommunityAuthGate>
+        {children}
+      </CommunityAuthGate>
     </AuthProvider>
   );
 }

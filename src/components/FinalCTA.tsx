@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import posthog from "posthog-js";
 
 export default function FinalCTA() {
     return (
@@ -20,10 +21,10 @@ export default function FinalCTA() {
                         Free tier available. No credit card required.
                     </p>
                     <div className="flex items-center justify-center gap-4 max-md:flex-col">
-                        <a href="https://app.wrapshoot.com" className="btn btn-primary">
+                        <a href="https://app.wrapshoot.com" className="btn btn-primary" onClick={() => posthog.capture("cta_clicked", { location: "final_cta", label: "Get Started" })}>
                             Get Started
                         </a>
-                        <a href="mailto:hello@wrapshoot.com" className="btn btn-outline">
+                        <a href="mailto:hello@wrapshoot.com" className="btn btn-outline" onClick={() => posthog.capture("cta_clicked", { location: "final_cta", label: "Talk to Sales" })}>
                             Talk to Sales
                         </a>
                     </div>
