@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 
 const features = [
     {
-        title: "Four Scheduling Views",
+        title: "Three Scheduling Views",
         description:
-            "Grid, kanban, timeline, and list. Same data, different lens — switch without losing work.",
+            "Grid, timeline, and list. Same data, different lens — switch without losing work.",
     },
     {
         title: "Confidence-Scored Suggestions",
@@ -26,7 +26,7 @@ const features = [
     {
         title: "Standard Formatting",
         description:
-            "Eighth-based page counts, color-coded revisions, and call sheets formatted the way your crew expects.",
+            "Color-coded revisions and call sheets formatted the way your crew expects.",
     },
     {
         title: "PDF Export",

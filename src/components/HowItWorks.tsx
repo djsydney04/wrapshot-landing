@@ -25,7 +25,7 @@ const phases = [
         phase: "Schedule",
         title: "Stripboard & Day Planning",
         description:
-            "Drag-and-drop stripboard with grid, kanban, timeline, and list views. Scene arrangement, day-out-of-days, and page-eighth tracking all stay in sync.",
+            "Drag-and-drop stripboard with grid, timeline, and list views. Scene arrangement and day-out-of-days tracking all stay in sync.",
     },
     {
         phase: "Budget",
